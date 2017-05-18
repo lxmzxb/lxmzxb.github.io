@@ -1,0 +1,19 @@
+/*
+* @Author: dell
+* @Date:   2017-03-07 15:43:06
+* @Last Modified by:   dell
+* @Last Modified time: 2017-03-12 23:22:47
+*/
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	 
+}
+a{
+		color:#424242;
+}
+a:hover{
+	color:#FF6608;
+}

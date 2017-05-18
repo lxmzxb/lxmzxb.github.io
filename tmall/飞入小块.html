@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+    window.onload = function () {
+        var boxs = document.querySelector(".box");
+        var tips = document.querySelector(".tip");
+        boxs.onmouseover = function () {
+            tips.classList.add("show");
+        }
+        boxs.onmouseout = function () {
+            if (tips.classList.contains("show")) {
+                tips.classList.remove("show");
+                tips.classList.add("hide");
+            }
+            tips.addEventListener("animationend", function () {
+                if (tips.classList.contains("hide")) {
+                    tips.classList.remove("hide");
+                }
+            });
+        };
+    }
+
+</script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background: pink;
+            /*margin-bottom: 10px;*/
+        }
+
+        .tip {
+            width: 300px;
+            height: 100px;
+            background: burlywood;
+            position: absolute;
+            left: 300px;
+            top: 0;
+            display: none;
+        }
+
+        @keyframes flyLeft {
+            0% {
+                opacity: 0;
+                left: 300px;
+            }
+            100% {
+                opacity: 1;
+                left: 100px;
+            }
+        }
+
+        @keyframes hide {
+            0% {
+                opacity: 1;
+                left: 100px;
+            }
+            100% {
+                opacity: 0;
+                left: 300px;
+            }
+        }
+
+        .show {
+            animation: flyLeft 1s ease-in forwards;
+            display: block;
+        }
+
+        .hide {
+            animation: hide 1s ease-in forwards;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+<div class="box">
+    <div class="tip"></div>
+</div>
+</body>
+</html>

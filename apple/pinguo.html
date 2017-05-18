@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>苹果官网</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/pinguo.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+</head>
+<script>
+	window.onload=function () {
+		var bm=document.querySelector(".banner");
+		var btn=document.querySelectorAll(".lbd li");
+		var img=document.querySelectorAll(".banner-box a");
+		var jt1=document.querySelector(".le-btn");
+		var jt2=document.querySelector(".rg-btn");
+		var z=5;
+		img[0].style.zIndex=z;
+		var  t= setInterval(move,3000);
+		var num=0;
+		var flag = true;
+		btn[0].classList.add("active");
+		function move() {
+			img[num].classList.add("leftOut");
+			btn[num].classList.remove("active");
+			num++;
+			if(num==img.length){
+				num=0;
+			}
+			btn[num].classList.add("active");
+			img[num].classList.add("leftIn");
+			img[num].style.zIndex=z++;
+
+		}
+		img.forEach(function (value) {
+			value.addEventListener("animationend", function() {
+				value.className = "";
+				flag=true;
+			});
+		});
+		bm.onmouseover=function () {
+			jt1.style.display="block";
+			jt2.style.display="block";
+			clearInterval(t);
+		}
+		bm.onmouseout=function () {
+			jt1.style.display="none";
+			jt2.style.display="none";
+			t= setInterval(move,3000);
+		}
+		Array.from(btn).forEach(function (value,index) {
+			value.onclick=function () {
+				if(index>num&&flag){
+					flag=false;
+					img[num].classList.add("leftOut");//之前的飞出
+					btn[num].classList.remove("active");
+					btn[index].classList.add("active");//当前的飞入
+					img[index].classList.add("leftIn");
+					num=index;
+					img[index].style.zIndex=z++;
+				}
+				else if(index<num&&flag)
+				{    flag=false;
+					img[num].classList.add("rightOut");//之前的飞出
+					btn[num].classList.remove("active");
+					btn[index].classList.add("active");//当前的飞入
+					img[index].classList.add("rightIn");
+					num=index;
+					img[index].style.zIndex=z++;
+				}
+				else{
+					return;
+				}
+			}
+		});
+		//箭头动效
+		jt1.onclick=function () {
+			if(flag){
+				flag=false;
+				move();
+			}
+
+		}
+		jt2.onclick=function () {
+			if(flag){
+				flag=false;
+				img[num].classList.add("rightOut");//之前的飞出
+				btn[num].classList.remove("active");
+				num--;
+				if(num==-1) {
+					num= img.length - 1;
+				}
+				btn[num].classList.add("active");//当前的飞入
+				img[num].classList.add("rightIn");
+				img[num].style.zIndex=z++;
+			}
+
+		}
+	}
+
+</script>
+<body >
+<!-- <div class="box"></div> -->
+<header>
+<div class="header-top" >
+	<main>
+		<div> <广告> </div>
+	</main>
+	</div>
+	<nav>
+	<!-- 大屏 -->
+		<main>
+		<ul class="max-nav">
+			<li class="iconfont icon-pingguo"></li>
+			<li>Mac</li>
+			<li>ipad</li>
+			<li>iPhone</li>
+			<li>Watch</li>
+			<li>Music</li>
+			<li>技术支持</li>
+			<li class="iconfont icon-sousuo_sousuo"></li>
+			<li class="iconfont icon-dianchibattery142"></li>
+		</ul>
+		<!-- 小屏显示 -->
+		<ul class="min-nav">
+			<li class="iconfont icon-caidan"></li>
+			<li class="iconfont icon-pingguo"></li>
+			<li class="iconfont icon-dianchibattery142"></li>
+		</ul>
+		</main>
+	</nav>
+</header>
+<!-- banner -->
+<div class="banner">
+	<div class="s le-btn"><</div>
+	<div class="s rg-btn">></div>
+	<!--轮播点-->
+	<ul class="lbd">
+		<li class="mq"></li>
+		<li class="mq"></li>
+		<li class="mq"></li>
+	</ul>
+<!--图片 -->
+	<div class="banner-box">
+		<a href="" style="background:#F2F2F2;">
+			<p>ipad</p>
+			<p>方寸间，乐趣全开</p>
+			<img src="Images/macbookpro_large.jpg" alt=""  style="width:45%;">
+		</a>
+		<a href="">
+			<p style="font-size:30px">WATCH</p>
+			<p>每一天，都可以更美好</p>
+			<img src="Images/ipad_large.jpg" alt=""></a>
+		<a href="" style="background:#CC3341;color: #fff">
+			<p>iphone7</p>
+			<p>现在更以红色呈现</p>
+			<img src="Images/iphone7_productred_large.png" alt="" style="width:60%;margin-bottom:0px; ">
+		</a>
+	</div>
+</div>
+<!-- banner结束 -->
+<!-- 大屏图片 -->
+<div class="picture">
+
+	<div class="p1"><a href=""></a></div>
+	<div class="p2"><a href=""></a></div>
+	<div class="p3"><a href=""></a></div>
+	<div class="p4"><a href="" style="background: "></a></div>
+</div>
+<!-- 图片结束 -->
+<!-- 中屏 -->
+<div class="picture2">
+	<div class="kuang">
+	<img src="Images/x5.jpg" alt="">
+	<img src="Images/x6.jpg" alt="">
+	</div>
+	<div class="kuang">
+	<img src="Images/x7.jpg" alt="">
+	<img src="Images/x8.jpg" alt="">
+	</div>
+</div>
+<!-- 中屏结束 -->
+<!--小屏 -->
+<div class="picture3">
+	<img src="Images/x9.jpg" alt="">
+	<img src="Images/x10.jpg" alt="">
+	<img src="Images/x11.jpg" alt="">
+	<img src="Images/x12.jpg" alt="">
+</div>
+<!-- 小屏结束-->
+<!-- 底部 -->
+<!-- 大屏 -->
+<footer class="max-footer">
+<main>
+<div class="text">
+<p>双镜头摄像头仅于 iPhone 7 Plus 提供。亮黑色外观仅于 128GB 及以上存储容量的机型提供。</p>
+</div>
+<div class="text2">
+<ul>
+	<li><b>选购及了解</b></li>
+	<li>Mac</li>
+	<li>iPad</li>
+	<li>iPhone</li>
+	<li>Watch</li>
+	<li>Music</li>
+	<li>iTunes</li>
+	<li>iPad</li>
+	<li>配件</li>
+	<li>App Store 充值卡</li>
+</ul>
+<ul>
+	<li><b>Apple Store 商店</b></li>
+	<li>查找零售店</li>
+	<li>Genius Bar 天才吧</li>
+	<li>讲座和学习</li>
+	<li>青少年活动</li>
+	<li>Apple Store App</li>
+	<li>翻新和优惠</li>
+	<li>分期付款</li>
+	<li>重复使用和循环利用</li>
+	<li>选购帮助</li>
+</ul>
+<ul>
+	<li><b>Apple 与教育</b></li>
+	<li>查找零售店</li>
+	<li></li>
+	<li></li>
+	<li><b>商务应用</b></li>
+	<li> </li>
+	<li>Apple 与商务</li>
+	<li>商务选购</li>
+</ul>
+<ul>
+	<li><b>帐户</b></li>
+	<li></li>
+	<li>管理你的 Apple ID</li>
+	<li>Apple Store 帐户</li>
+	<li>iCloud.com</li>
+	<li>Apple Store App</li>
+	<li></li>
+	<li></li>
+	<li><b>Apple 价值观</b></li>
+	<li></li>
+	<li>辅助功能</li>
+	<li>环境责任</li>
+	<li>隐私</li>
+	<li>供应商责任</li>
+</ul>
+<ul>
+	<li><b>关于 Apple</b></li>
+	<li>Apple 资讯</li>
+	<li>工作机会</li>
+	<li> </li>
+	<li>媒体资讯</li>
+	<li>活动</li>
+	<li>联系 Apple</li>
+</ul>
+</div>
+<div class="text">
+<p>更多选购方式：前往 Apple Store 零售店，致电 400-666-8800 或查找在你附近的授权经销商。</p>
+</div>
+<div class="text"><ul><li style="padding-right:20px; ">
+	Copyright © 2017 Apple Inc. 保留所有权利。</li>	
+		<li>隐私政策</li>
+		 <li>|</li>
+		<li>使用条款</li>
+		 <li>|</li>
+		<li>销售政策</li>
+		 <li>|</li>
+		<li>法律信息</li>
+		 <li>|</li>
+		<li>网站地图</li>
+	</ul>
+	<div class="text3"><p>
+	京公安网安备 11010502008968 京ICP备10214630</p>
+</div>
+</div>
+</main>
+</footer>
+<!-- <!-- 底部小屏 -->
+<footer class="min-footer">
+	<main>
+	<div class="text">
+<p>双镜头摄像头仅于 iPhone 7 Plus 提供。亮黑色外观仅于 128GB 及以上存储容量的机型提供。</p>
+</div>
+<ul class="footer2">
+	<li>
+	<span><b>选购及了解</b></span>
+	 <span class="right"><b>+</b></span>
+	</li>
+	<li><span><b>Appstore商店</b></span>
+         <span class="right"><b>+</b></span>
+	</li>
+	<li><span><b>教育应用</b></span>
+	<span class="right"><b>+</b></span>
+	</li>
+	<li><span><b>商务应用</b></span>
+	<span class="right"><b>+</b></span>
+	</li>
+	<li><span><b>账户</b></span>
+    <span class="right"><b>+</b></span>
+	</li>
+	<li><span><b>Apple价值观</b></span>
+	<span class="right"><b>+</b></span>
+	</li>
+	<li><span><b>关于Apple</b></span>
+	<span class="right"><b>+</b></span>
+	</li>
+</ul>
+	<div class="text4">
+<p>更多选购方式：前往 Apple Store 零售店，致电 400-666-8800 或查找在你附近的授权经销商。</p>
+</div>
+<div class="tu text4">
+<img src="Images/16.png" alt="" style="padding-right: 5px  style="float: left;"">  中国
+</div>
+<p class="text4">
+	Copyright © 2017 Apple Inc. 保留所有权利。</p>	
+<div class="text"><ul>	
+		<li>隐私政策</li>
+		 <li>|</li>
+		<li>使用条款</li>
+		 <li>|</li>
+		<li>销售政策</li>
+		 <li>|</li>
+		<li>法律信息</li>
+		 <li>|</li>
+		<li>网站地图</li>
+	</ul>
+	</div>
+	<div class="text3"><p>
+	京公安网安备 11010502008968 京ICP备10214630</p>
+</div>
+	</main>
+</footer> 
+<!-- 底部小屏结束 -->
+<!-- 底部结束 -->
+</body>
+</html>

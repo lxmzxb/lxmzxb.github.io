@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline:none;
+        }
+
+        ul,li{
+            list-style: none;
+        }
+        html,body{
+            height: 100%;
+            font-family: "微软雅黑";
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .title {
+            width: 100%;
+            height: 100px;
+            background: #0ff;
+            line-height: 100px;
+            font-size: 20px;
+            font-weight: bold;
+            padding-left: 30px;
+        }
+
+        .inputarea {
+            width: 100%;
+            height: 50px;
+
+        }
+
+        #text {
+            float: left;
+            width: 300px;
+            height: 50px;
+
+        }
+
+        #submit {
+            width: 150px;
+            height: 50px;
+            float: left;
+            background: #33ff33;
+            border: none;
+        }
+
+        .show {
+            width: 100%;
+            background: #369;
+            flex-grow: 1;
+            background: #eee;
+        }
+
+        body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .plan {
+            width: 50%;
+            height: 100%;
+            overflow: auto;
+            background: #369;
+            float: left;
+        }
+
+        .done {
+            width: 50%;
+            height: 100%;
+            overflow: auto;
+            background: #963;
+            float: right;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li input {
+            margin: 0;
+            padding: 9px;
+            float: left;
+            width: 30px;
+            height: 30px;
+        }
+
+        ul li span {
+            float: left;
+            width: 400px;
+            height: auto;
+            line-height: 30px;
+            color: #fff;
+            padding-left: 30px;
+
+        }
+
+        ul li time {
+            float: right;
+            width: auto;
+            height: 30px;
+            background: red;
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+        }
+
+        .contenttitle {
+            width: 50%;
+            height: 50%;
+            float: left;
+            text-align: center;
+            font-size: 16px;
+            color: red;
+            font-weight: bold;
+        }
+        .show ul li{
+            width: 100%;
+            height: auto;
+            color: white;
+            float: left;
+            line-height: 30px;
+            border:1px dashed #000000;
+        }
+
+    </style>
+</head>
+<body>
+<div class="title">TODO LIST</div>
+<div class="inputarea">
+    <input type="text" id="text">
+    <input type="submit" id="submit" value="提交">
+</div>
+
+<div class="show">
+    <div class="contenttitle">未完成</div>
+    <div class="contenttitle">已完成</div>
+    <ul class="plan">
+
+    </ul>
+    <ul class="done">
+
+    </ul>
+</div>
+</body>
+<script>
+    var text = document.querySelector("#text");
+    var submit = document.querySelector("#submit");
+    var plan = document.querySelector(".plan");
+    var done = document.querySelector(".done");
+    function getData() {//获取数据
+        return  localStorage.todo?JSON.parse(localStorage.todo):[];
+
+    }
+    function save(data) {
+        localStorage.todo = JSON.stringify(data);
+    }
+    submit.onclick = function () {
+        if (text.value=="") {
+            return;
+        }
+        var val = text.value;
+        text.value ="";
+        var data = getData();
+        var date = new Date();
+        var time = date.getTime();
+        data.push({content:val,time,done:false});
+        save(data);
+        reWrite();
+    }
+    reWrite();
+    function reWrite() {
+        var data = getData();
+        var str1 =" " , str2 =" ";
+        data.forEach(function (v,i) {
+            if (!v.done) {
+                str1 += `<li id=${i}> <input type="checkbox"  onfocus="changestate(this)"><span contenteditable='true' onblur="changecontent(this)">${v.content}</span><time>${time(v.time)}</time></li>`;
+            } else {
+                str2+=`<li id=${i}><input type="checkbox" onfocus="del(this)"><span>${v.content}</span><time>${time(v.time)}</time></li>`;
+            }
+            plan.innerHTML= str1;
+            done.innerHTML= str2;
+        });
+    }
+    function time(t) {
+        var date = new Date();
+        date.setTime(t);
+        var year = date.getFullYear();
+        var mouth = setZero(date.getMonth() + 1);
+        var day=setZero(date.getDay());
+        var hour=setZero(date.getHours());
+        var minutes=setZero(date.getMinutes());
+        var seconds=setZero(date.getSeconds());
+        return year+"/"+mouth+"/"+day+"&nbsp"+hour+":"+minutes+":"+seconds;
+    }
+    function del(ele) {
+        var id=ele.parentNode.id
+        var data=getData();
+        console.log(data);
+        data.splice(id,1);
+        save(data);
+        reWrite();
+    }
+    //修改
+    function changecontent(ele) {
+        var id=ele.parentNode.id;
+        var val=ele.innerHTML;
+        var data=getData();
+        data[id].content=val;
+        save(data);
+        reWrite();
+    }
+    function setZero(num) {
+        if (num < 10) {
+            return "0" + num;
+        } else {
+            return num;
+        }
+    }
+    function changestate(ele) {
+        var id=ele.parentNode.id;
+        var data=getData();
+        data[id].done=true;
+        save(data);
+        reWrite();
+
+    }
+    function changeState(ele) {
+        var id=ele.parentNode.id;
+        var data=getData();
+        data[id].done=true;
+        saveData(data);
+        reWrite();
+    }
+
+</script>
+
+</html>
+

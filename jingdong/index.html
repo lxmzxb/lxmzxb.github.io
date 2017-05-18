@@ -1,0 +1,2939 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>京东官网</title>
+</head>
+<link rel="stylesheet" href="css/mian.css">
+<link rel="stylesheet" href="css/base.css">
+<script src="jQuery.js"></script>
+<script>
+    window.onload = function () {
+        var lbt = document.querySelectorAll(".bannertt li");
+        var dian = document.querySelectorAll(".dian li")
+        var banner = document.querySelector(".beijing");
+        var d = dian[0];
+        var l = lbt[0];
+        Array.from(dian).forEach(function (value, index) {
+            d.style.background = "red";
+            l.style.zIndex = 1;
+            value.onmouseover = function () {
+                num = index;
+                d.style.background = "";
+                dian[index].style.background = "red";
+                l.style.zIndex = 1;
+                l.style.opacity = "0";
+                lbt[index].style.zIndex = 2;
+                lbt[index].style.opacity = "1";
+                d = dian[index];
+                l = lbt[index];
+
+            }
+            banner.onmouseover = function () {
+                clearInterval(window.t);
+                zj.style.display = "block";
+                yj.style.display = "block";
+            }
+            banner.onmouseout = function () {
+                window.t = setInterval(move, 3000);
+                zj.style.display = "none";
+                yj.style.display = "none";
+            }
+
+        });
+        var num = 0;
+
+        function move() {
+            num++;
+            if (num == dian.length) {
+                num = 0;
+            }
+            d.style.background = "";
+            dian[num].style.background = "red";
+            l.style.zIndex = 1;
+            l.style.opacity = "0";
+            lbt[num].style.zIndex = 2;
+            lbt[num].style.opacity = "1";
+            d = dian[num];
+            l = lbt[num];
+
+        }
+
+        window.t = setInterval(move, 3000);
+        var zj = document.querySelector(".yjt");
+        var yj = document.querySelector(".zjt");
+        zj.onclick = function () {
+            move();
+        }
+        yj.onclick = function () {
+            if (num == 0) {
+                num = lbt.length;
+            }
+            num -= 2;
+            move();
+        }
+        // 左右滚动图标
+        var bx=document.querySelector(".pt_ft");
+        var pre = document.querySelector(".zjt2");
+        var next = document.querySelector(".yjt2");
+        var img = document.querySelectorAll(".lt ul");
+        dong(img, next, pre);
+
+        var pre2 = document.querySelector(".zjt3");
+        var next2 = document.querySelector(".yjt3");
+        var img2 = document.querySelectorAll(".lt2 ul");
+        dong(img2, next2, pre2);
+        var pre3 = document.querySelector(".zjt4");
+        var next3 = document.querySelector(".yjt4");
+        var img3 = document.querySelectorAll(".lt3 ul");
+        dong(img3, next3, pre3);
+        var pre4 = document.querySelector(".zjt5");
+        var next4 = document.querySelector(".yjt5");
+        var img4 = document.querySelectorAll(".lt4 ul");
+        dong(img4, next4, pre4);
+        var pre5 = document.querySelector(".zjt6");
+        var next5 = document.querySelector(".yjt6");
+        var img5 = document.querySelectorAll(".pt_ft1 ul");
+        dong1(img5, next5, pre5);
+        var pre7 = document.querySelector(".zjt7");
+        var next7 = document.querySelector(".yjt7");
+        var img7 = document.querySelectorAll(".pt_ft3 ul");
+        dong3(img7, next7, pre7);
+        var pre8 = document.querySelector(".zjt8");
+        var next8 = document.querySelector(".yjt8");
+        var img8 = document.querySelectorAll(".pt_ft4 ul");
+        dong3(img8, next8, pre8);
+        var pre9 = document.querySelector(".zjt9");
+        var next9 = document.querySelector(".yjt9");
+        var img9 = document.querySelectorAll(".pt_ft5 ul");
+        dong3(img9, next9, pre9);
+        function dong(img, next, pre) {
+            var z = 5;
+            img[0].style.zIndex = z;
+            var n = 0;
+            var flag = true;
+
+            function moves() {
+                img[n].classList.add("leftOut");
+                n++;
+                if (n == img.length) {
+                    n = 0;
+                }
+                img[n].classList.add("leftIn");
+                img[n].style.zIndex = z++;
+            }
+
+            img.forEach(function (value) {
+                value.addEventListener("animationend", function () {
+                    value.className = "";
+                    flag = true;
+                });
+            });
+            next.onclick = function () {
+                if (flag) {
+                    flag = false;
+                    moves();
+                }
+
+            }
+            pre.onclick = function () {
+                if (flag) {
+                    flag = false;
+                    img[n].classList.add("rightOut");//之前的飞出
+                    n--;
+                    if (n == -1) {
+                        n = img.length - 1;
+                    }//当前的飞入
+                    img[n].classList.add("rightIn");
+                    img[n].style.zIndex = z++;
+                }
+
+            }
+
+        }
+
+        function dong1(img, next, pre) {
+            var z = 5;
+            img[0].style.zIndex = z;
+            var n = 0;
+            var flag = true;
+
+            function moves() {
+                img[n].classList.add("leftOut1");
+                n++;
+                if (n == img.length) {
+                    n = 0;
+                }
+                img[n].classList.add("leftIn1");
+                img[n].style.zIndex = z++;
+            }
+
+            img.forEach(function (value) {
+                value.addEventListener("animationend", function () {
+                    value.className = "";
+                    flag = true;
+                });
+            });
+            next.onclick = function () {
+                if (flag) {
+                    flag = false;
+                    moves();
+                }
+
+            }
+            pre.onclick = function () {
+                if (flag) {
+                    flag = false;
+                    img[n].classList.add("rightOut1");//之前的飞出
+                    n--;
+                    if (n == -1) {
+                        n = img.length - 1;
+                    }//当前的飞入
+                    img[n].classList.add("rightIn1");
+                    img[n].style.zIndex = z++;
+                }
+
+            }
+        }
+
+        function dong3(img, next, pre) {
+            var z = 5;
+            img[0].style.zIndex = z;
+            var n = 0;
+            var flag = true;
+
+            function moves() {
+                img[n].classList.add("leftOut3");
+                n++;
+                if (n == img.length) {
+                    n = 0;
+                }
+                img[n].classList.add("leftIn3");
+                img[n].style.zIndex = z++;
+            }
+
+            img.forEach(function (value) {
+                value.addEventListener("animationend", function () {
+                    value.className = "";
+                    flag = true;
+                });
+            });
+            next.onclick = function () {
+                if (flag) {
+                    flag = false;
+                    moves();
+                }
+
+            }
+            pre.onclick = function () {
+                if (flag) {
+                    flag = false;
+                    img[n].classList.add("rightOut3");//之前的飞出
+                    n--;
+                    if (n == -1) {
+                        n = img.length - 1;
+                    }//当前的飞入
+                    img[n].classList.add("rightIn3");
+                    img[n].style.zIndex = z++;
+                }
+
+            }
+        }
+
+//返回顶部
+        $(".top").click(function () {
+            $("body,html").animate({scrollTop: 0}, 400, "linear");
+        });
+        //跳级
+        $(".itw").click(function () {
+            var index = $(this).index();
+            console.log(this,index);
+            if(index==9){
+                index=5;
+            }
+            else if(index==8){
+                index=4;
+            }
+            var top= $(".floor").eq(index).offset().top;
+            $("body,html").animate({scrollTop:top-100}, 400, "linear");
+
+        }).hover(function () {
+            $(this).css("background","#D70B1C");
+        }, function () {
+            $(this).css("background", "");
+        });
+        var to;
+        $(window).scroll(function () {
+            var st = $(window).scrollTop();
+            clearTimeout(to);
+            to= setTimeout(function () {
+                $(".floor").each(function (i, v) {
+                    if (st >=$(v).offset().top-150) {
+                        $(".itw").eq(i).addClass("active").siblings().removeClass("active");
+                    }
+                });
+            }, 500);
+        });
+        //计时功能
+        var time =10800;
+        var mins = 0;
+        var secs = 0;
+        var hours=0;
+        var x= setInterval(times, 1000);
+        function times() {
+                 time--;
+                console.log(time);
+                hours=Math.floor(time/3600);
+                mins = Math.floor((time-hours*3600)/60);
+                secs = Math.floor((time-hours*3600)% 60);
+                var s3 = (secs < 10 ? "0" + secs : secs);
+                var s2 = (mins < 10 ? "0" +mins : mins);
+                var s1 = (hours < 10 ? "0" +hours : hours);
+            $(".m1 span").html(s1);
+               $(".m2 span").html(s2);
+                $(".m3 span").html(s3);
+
+        }
+        if(time==0){
+            clearInterval(x);
+        }else{
+            x= setInterval(times, 1000);
+        }
+        //搜索框
+        var flag1 = true, flag2 = true;
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 500) {
+                $(".sou1").css("top", 0);
+                if (flag1) {
+                    flag1 = false;
+                    flag2 = true;
+                    $(".dingwei").animate({width: 34, height: 490});
+                }
+
+            } else {
+                $(".sou1").css("top", -50)
+                if (flag2) {
+                    flag1 = true;
+                    flag2 = false;
+                    $(".dingwei").animate({width: 0, height: 0});
+                }
+            }
+        });
+    }
+
+
+</script>
+<body>
+<!--抬头-->
+<div class="sou1">
+    <div class="s-mian">
+        <img src="img/logo_s.v2.png" alt="" style="float: left;">
+        <input type="text" placeholder="热水器" class="text">
+        <input type="button" class="button">
+    </div>
+</div>
+<div class="tai">
+    <img src="img/a.jpg" alt="">
+</div>
+<!--导航-->
+<nav>
+    <div class="diqu">
+        <img src="img/dizhi.png" alt=""><span>北京</span>
+    </div>
+    <div class="n-right">
+        <a href="">你好，请登录 <span style="
+              display:inline-block;
+              transform:rotate(0deg);
+              color:red;
+              ">免费注册</span></a>
+        <a href="">我的订单</a>
+        <a href="">我的京东 <span>></span></a>
+        <a href="">京东会员</a>
+        <a href="">企业采购</a>
+        <a href="">客户服务 <span>></span></a>
+        <a href="">网站导航 <span>></span></a>
+        <a href="" style="border:none;">手机京东</a>
+    </div>
+</nav>
+<!--搜索框-->
+<div class="sou">
+    <div class="logo">
+        <img src="img/logo.v2.png" alt="">
+    </div>
+    <div class="sou-right">
+        <div class="s-text">
+            <input type="text" placeholder="瘦身">
+        </div>
+        <div class="button"><input type="button"></div>
+        <div class="gouwuche">
+            <img src="img/gwc.png" alt="">
+            <span>购物车</span>
+            <div class="shuzi">0</div>
+        </div>
+        <div class="biaoti">
+            <ul>
+                <li><a href=""><span>自营箱包</span></a></li>
+                <li class="a"><a href="">智能酷玩</a></li>
+                <li><a href="">满199减100</a></li>
+                <li><a href="">箱包满199减100</a></li>
+                <li><a href="">家电秒杀</a></li>
+                <li><a href="">睡衣女冬</a></li>
+                <li><a href="">移动硬盘1t</a></li>
+                <li><a href="">满199减100</a></li>
+        </div>
+    </div>
+    <div class="erwei">
+        <div class="sanjiao"></div>
+        <img src="img/mobile_qrcode.jpg" alt="">
+    </div>
+    <div class="biaoti2">
+        <ul>
+            <li><a href="">秒杀</a></li>
+            <li><a href="">优惠卷</a></li>
+            <li><a href="">闪购</a></li>
+            <li><a href="">拍卖</a></li>
+            <li><a href="">服装城</a></li>
+            <li><a href="">京东超市</a></li>
+            <li><a href="">生鲜</a></li>
+            <li><a href="">全球购</a></li>
+            <li><a href="">京东金融</a></li>
+        </ul>
+    </div>
+</div>
+<!--banner开始-->
+<div class="banner">
+    <aside>
+        <ul>
+            <li>家用电器</li>
+            <li>手机<span>/</span>运营商<span>/</span>数码</li>
+            <li>电脑<span>/</span>办公</li>
+            <li>家居<span>/</span>家装/厨具
+            <li>男装<span>/</span>女装<span>/</span>童装<span>/</span>内衣</li>
+            <li>美女个护<span>/</span>宠物</li>
+            <li>女鞋<span>/</span>箱包<span>/</span>钟表<span>/</span>珠宝</li>
+            <li>男鞋<span>/</span>运动 <span>/</span>户外</li>
+            <li>汽车<span>/</span>汽车用品</li>
+            <li>母婴<span>/</span>玩具乐器</li>
+            <li>食品<span>/</span>酒类<span>/</span>生鲜<span>/</span>特产</li>
+            <li>医药保健 <span>/</span>计生情趣</li>
+            <li>图书<span>/</span>音像<span>/</span>电子书</li>
+            <li>机票<span>/</span>酒店<span>/</span>旅游<span>/</span>生活</li>
+            <li>理财<span>/</span>众筹<span>/</span>白条<span>/</span>保险</li>
+        </ul>
+    </aside>
+    <div class="bannertu">
+        <div class="beijing">
+            <div class="jtbtn zjt"><</div>
+            <div class="jtbtn yjt">></div>
+            <div class="lbd">
+                <ul class="dian">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li style="margin-right:0"></li>
+                </ul>
+            </div>
+            <ul class="bannertt">
+                <li><img src="img/banner.jpg" alt=""></li>
+                <li><img src="img/banner2.jpg" alt=""></li>
+                <li><img src="img/banner3.jpg" alt=""></li>
+                <li><img src="img/banner4.jpg" alt=""></li>
+                <li><img src="img/banner5.jpg" alt=""></li>
+                <li><img src="img/banner6.jpg" alt=""></li>
+                <li><img src="img/banner7.jpg" alt=""></li>
+                <li><img src="img/banner8.jpg" alt=""></li>
+            </ul>
+        </div>
+        <div class="b-middle">
+            <img src="img/b1.jpg" alt="">
+            <img src="img/b2.jpg" alt="" style="margin-right:0px">
+        </div>
+    </div>
+
+
+    <div class="b-right">
+        <div class="user-into">
+            <div class="j-user">
+                <img src="img/touxiang.jpg" alt="">
+            </div>
+            <div class="j-hi">
+                <p>Hi！欢迎来到京……</p>
+                <p><a href="">登录</a>
+                    <a href="">注册</a></p>
+            </div>
+
+        </div>
+        <div class="user-pfit">
+            <a href="">新人福利</a>
+            <a href="">PLUS会员</a>
+        </div>
+        <div class="b-new">
+            <div class="bnt">
+                <a href="">促销</a>
+                <a href="" style="padding-right:45px;
+                padding-left: 0px">公告</a>
+                <a href="" style="border:none;
+                 padding-left:10px;padding-right:0px">更多</a>
+            </div>
+            <div class="n-tiao">
+                <ul>
+                    <li class="news_item">
+                        <a href="" target="_blank">
+                            拜耳开业免税全场200减50
+                        </a>
+                    </li>
+                </ul>
+                <li class="news_item">
+                    <a href="" target="_blank">
+                        家居好货买4免1提前逛
+                    </a>
+                </li>
+                <li class="news_item">
+                    <a href="" target="_blank" class="news_link">
+                        家居日用满2件9折 满3件8折
+                    </a>
+                </li>
+                <li class="news_item">
+                    <a href="" target="_blank" class="news_link">
+                        奥克斯空调满1000减100
+                    </a>
+                </li>
+            </div>
+        </div>
+        <div class="tubiao">
+            <ul>
+                <li>
+                    <div class="tu">
+                    </div>
+                    <span>话费</span>
+                </li>
+                <li>
+                    <div class="tu2">
+                    </div>
+                    <span>机票</span>
+                </li>
+                <li>
+                    <div class="tu3">
+                    </div>
+                    <span>酒店</span>
+                </li>
+                <li>
+                    <div class="tu4">
+                    </div>
+                    <span>游戏</span>
+                </li>
+                <li>
+                    <div class="tu5">
+                    </div>
+                    <span>企业购</span>
+                </li>
+                <li>
+                    <div class="tu6">
+                    </div>
+                    <span>加油卡</span>
+                </li>
+                <li>
+                    <div class="tu7">
+                    </div>
+                    <span>电影票</span>
+                </li>
+                <li>
+                    <div class="tu8">
+                    </div>
+                    <span>火车票</span>
+                </li>
+                <li>
+                    <div class="tu9">
+                    </div>
+                    <span>众筹</span>
+                </li>
+                <li>
+                    <div class="tu10">
+                    </div>
+                    <span>理财</span>
+                </li>
+                <li>
+                    <div class="tu11">
+                    </div>
+                    <span>礼品卡</span>
+                </li>
+                <li>
+                    <div class="tu12">
+                    </div>
+                    <span>白条</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--秒杀开始-->
+<div class="ms">
+    <div class="m-title">
+        <div class="m-con"></div>
+        <div class="m-biao"></div>
+        <h3 class="box_tit">京东秒杀</h3>
+        <a href="" target="_blank" class="box_subtit">
+            总有你想不到的低价
+            <div class="box_subtit_arrow"></div>
+        </a>
+        <div class="ms-right">
+            <span>当前场次</span>
+            <div class="m m1">
+                <span>03</span>
+            </div>
+            <div class="cd_split">
+                <div class="cd_split_dot cd_split_top">
+                </div>
+                <div class="cd_split_dot cd_split_bottom">
+                </div>
+            </div>
+            <div class="m m2">
+                <span>00</span>
+            </div>
+            <div class="cd_split">
+                <div class="cd_split_dot cd_split_top">
+                </div>
+                <div class="cd_split_dot cd_split_bottom">
+                </div>
+            </div>
+            <div class="m m3">
+                <span>00</span>
+            </div>
+            <span style="margin-left:5px;">后结束抢购</span>
+        </div>
+    </div>
+    <div class="ms-con">
+        <ul>
+            <li>
+                <div class="ms-item">
+                    <a href="">
+                        <img src="img/m1.jpg" alt="">
+                    </a>
+                    <div class="sk_item_shadow"></div>
+                    <p class="sk_item_name">联想(Lenovo)拯救者R720 15.6英寸游戏笔记本电脑(i7-7700HQ 8G 1T GTX1050 2G IPS 黑)</p>
+                    <span class="mod_price sk_item_price_new">
+                        <div>¥</div><span>5998.00</span>
+                        <div style="color:#ccc; width:50px;margin-left:5px"><s>¥&nbsp;6799.00</s></div></span>
+                </div>
+            </li>
+            <li>
+                <div class="ms-item">
+                    <a href="">
+                        <img src="img/m2.jpg" alt="">
+                    </a>
+                    <div class="sk_item_shadow"></div>
+                    <p class="sk_item_name">联想(Lenovo)拯救者R720 15.6英寸游戏笔记本电脑(i7-7700HQ 8G 1T GTX1050 2G IPS 黑)</p>
+                    <span class="mod_price sk_item_price_new">
+                        <div>¥</div><span>5998.00</span>
+                        <div style="color:#ccc; width:50px;margin-left:5px"><s>¥&nbsp;6799.00</s></div></span>
+                </div>
+            </li>
+            <li>
+                <div class="ms-item">
+                    <a href="">
+                        <img src="img/m3.jpg" alt="">
+                    </a>
+                    <div class="sk_item_shadow"></div>
+                    <p class="sk_item_name">联想(Lenovo)拯救者R720 15.6英寸游戏笔记本电脑(i7-7700HQ 8G 1T GTX1050 2G IPS 黑)</p>
+                    <span class="mod_price sk_item_price_new">
+                        <div>¥</div><span>5998.00</span>
+                        <div style="color:#ccc; width:50px;margin-left:5px"><s>¥&nbsp;6799.00</s></div></span>
+                </div>
+            </li>
+            <li>
+                <div class="ms-item">
+                    <a href="">
+                        <img src="img/m4.jpg" alt="">
+                    </a>
+                    <div class="sk_item_shadow"></div>
+                    <p class="sk_item_name">联想(Lenovo)拯救者R720 15.6英寸游戏笔记本电脑(i7-7700HQ 8G 1T GTX1050 2G IPS 黑)</p>
+                    <span class="mod_price sk_item_price_new">
+                        <div>¥</div><span>5998.00</span>
+                        <div style="color:#ccc; width:50px;margin-left:5px"><s>¥&nbsp;6799.00</s></div></span>
+                </div>
+            </li>
+            <li>
+                <div class="ms-item">
+                    <a href="">
+                        <img src="img/m5.jpg" alt="">
+                    </a>
+                    <div class="sk_item_shadow"></div>
+                    <p class="sk_item_name">联想(Lenovo)拯救者R720 15.6英寸游戏笔记本电脑(i7-7700HQ 8G 1T GTX1050 2G IPS 黑)</p>
+                    <span class="mod_price sk_item_price_new">
+                        <div>¥</div><span>5998.00</span>
+                        <div style="color:#ccc; width:50px;margin-left:5px"><s>¥&nbsp;6799.00</s></div></span>
+                </div>
+            </li>
+            <li style="border:none; text-align: left; padding:0px;s">
+                <img src="img/m6.jpg" alt="" style="margin-top:10px;margin-left:10px;">
+            </li>
+        </ul>
+    </div>
+</div>
+<!--发现好货-->
+<div class="grid-c1">
+    <div class="fbt_col1">
+        <div class="f-title1">
+            <div class="box_hd_arrow"></div>
+            <div class="box_hd_dec"></div>
+            <h3 class="box_tit">发现好货</h3>
+            <a href="" target="_blank" class="box_subtit1">
+                发现品质生活
+                <div class="box_subtit_arrow"></div>
+            </a>
+        </div>
+        <div class="fbt-con">
+            <ul>
+                <li>
+                    <a href="">
+                        <p class="find_item_name">索尼无线立体声耳机</p>
+                        <img src="img/c1.png" alt="">
+                    </a>
+                </li>
+                <li style="border-right: 0;">
+                    <a href="">
+                        <p class="find_item_name">猫王 胡桃木蓝牙音箱</p>
+                        <img src="img/c2.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <p class="find_item_name">FIILDiva头戴式无线耳机</p>
+                        <img src="img/c3.png" alt="">
+                    </a>
+                </li>
+                <li style="border-right: 0;">
+                    <a href="">
+                        <p class="find_item_name">小天金属无线蓝牙音箱</p>
+                        <img src="img/c4.png" alt="">
+                    </a>
+                </li>
+                <li style="border-bottom: 0;">
+                    <a href="">
+                        <p class="find_item_name">魅族PRO6拍照手机</p>
+                        <img src="img/c5.png" alt="">
+                    </a>
+                </li>
+                <li style="border: 0;">
+                    <a href="">
+                        <p class="find_item_name">森海塞尔HiFi耳机</p>
+                        <img src="img/c6.png" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="fbt_col1">
+        <div class="f-title2">
+            <div class="box_hd_arrow"></div>
+            <div class="box_hd_dec1"></div>
+            <h3 class="box_tit">优品专辑</h3>
+            <a href="" target="_blank" class="box_subtit1">
+                甄选优质好物
+                <div class="box_subtit_arrow"></div>
+            </a>
+        </div>
+        <div class="f2-con">
+            <a href="">
+                <p class="sup_desc">长T恤大玩下装消失法，瞬间拥有大长腿</p>
+                <img src="img/mk1.jpg" alt="" class="sup_img">
+                <img src="img/mk2.jpg" alt="" class="sup_img">
+                <img src="img/mk3.jpg" alt="" class="sup_img">
+            </a>
+            <div class="sup_sep"></div>
+            <a href="" class="sup_sep">
+                <p class="sup_desc">小长假出游踏青，雪纺碎花裙教你抢镜</p>
+                <img src="img/mk4.jpg" alt="" class="sup_img">
+                <img src="img/mk5.jpg" alt="" class="sup_img">
+                <img src="img/mk6.jpg" alt="" class="sup_img">
+
+            </a>
+            <ul class="sup_ind">
+                <li class="sup_ind_item J_sup_ind_item active"
+                    style="background: #e01222;"></li>
+                <li class="sup_ind_item J_sup_ind_item active"></li>
+                <li class="sup_ind_item J_sup_ind_item active"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="fbt_col1" style="margin-right:0px;">
+        <div class="f-title3">
+            <div class="box_hd_arrow"></div>
+            <div class="box_hd_dec2"></div>
+            <h3 class="box_tit">排行榜</h3>
+            <a href="" target="_blank" class="box_subtit2">
+                专属于你的购物指南
+                <div class="box_subtit_arrow"></div>
+            </a>
+        </div>
+        <div class="f-con3">
+            <div class="ct">
+                <a href="" class="f-item"> 除湿机</a>
+                <a href="" class="f-item">手机通讯</a>
+                <a href="" class="f-item"> 粮油调味</a>
+                <a href="" class="f-item"> 手机保护套</a>
+                <a href="" class="f-item" style="border: none;"> 休闲鞋</a>
+            </div>
+            <div class="cm">
+                <ul>
+                    <li><a href="">
+                        <div class="top_rank_1">1</div>
+                        <img src="img/w1.png" alt="">
+                        <p class="top_name">格力（GREE）DH20EH 新款智能数控 家用/地下室静音抽湿机/除湿器/除湿机</p>
+                    </a>
+                    </li>
+                    <li><a href="">
+                        <div class="top_rank_2">2</div>
+                        <img src="img/w2.png" alt="">
+                        <p class="top_name">格力（GREE）DH20EH 新款智能数控 家用/地下室静音抽湿机/除湿器/除湿机</p>
+                    </a>
+                    </li>
+                    <li><a href="" style="border-right:none;">
+                        <div class="top_rank_3">3</div>
+                        <img src="img/w3.png" alt="">
+                        <p class="top_name">格力（GREE）DH20EH 新款智能数控 家用/地下室静音抽湿机/除湿器/除湿机</p>
+                    </a>
+                    </li>
+                    <li><a href="">
+                        <div class="top_rank_4">4</div>
+                        <img src="img/w4.png" alt="">
+                        <p class="top_name">格力（GREE）DH20EH 新款智能数控 家用/地下室静音抽湿机/除湿器/除湿机</p>
+                    </a>
+                    </li>
+                    <li><a href="">
+                        <div class="top_rank_4">5</div>
+                        <img src="img/w5.png" alt="">
+                        <p class="top_name">格力（GREE）DH20EH 新款智能数控 家用/地下室静音抽湿机/除湿器/除湿机</p>
+                    </a>
+                    </li>
+                    <li><a href="" style="border-right:none;">
+                        <div class="top_rank_4">6</div>
+                        <img src="img/w6.png" alt="">
+                        <p class="top_name">格力（GREE）DH20EH 新款智能数控 家用/地下室静音抽湿机/除湿器/除湿机</p>
+                    </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--领券中心-->
+<div class="quan">
+    <div class="coupon_hd ">
+        <a href="" class="coupon_entry ">
+            <h3 class="coupon_entry_tit">领券中心</h3>
+            <span class="coupon_entry_gap"></span>
+            <p class="coupon_entry_txt coupon_entry_txt1">没抢到？</p>
+            <p class="coupon_entry_txt coupon_entry_txt2">可以去看看更多优惠券</p>
+            <span class="coupon_entry_btn" clstag="">
+                前往领券中心
+                <div class="coupon_entry_btn_ico"></div></span>
+        </a>
+    </div>
+    <div class="coupon_list">
+        <ul>
+            <li class="coupon_item ">
+                <a href="" class="coupon_item_lk">
+                    <div class="coupon_info">
+                        <p class="mod_price coupon_price"><span style="font-size:18px;margin:0 2px;">¥</span>5</p>
+                        <p class="coupon_desc"><span class="coupon_desc_txt">仅可购买京东自营牛奶指定商品</span></p>
+                        <p class="coupon_limit">
+                        <span class="coupon_limit_txt">
+                         消费满110元可用
+                        </span>
+                        </p>
+                        <p class="coupon_more" clstag="">更多好券</p>
+                    </div>
+                    <img src="img/e1.png" alt="" class="coupon_img ">
+                </a>
+            </li>
+            <li class="coupon_item ">
+                <a href="" class="coupon_item_lk">
+                    <div class="coupon_info">
+                        <p class="mod_price coupon_price"><span style="font-size:18px;margin:0 2px;">¥</span>2000</p>
+                        <p class="coupon_desc"><span class="coupon_desc_txt">仅可购买自营万国部分钟表商品</span></p>
+                        <p class="coupon_limit">
+                        <span class="coupon_limit_txt">
+                         消费满110元可用
+                        </span>
+                        </p>
+                        <p class="coupon_more" clstag="">更多服饰箱包券</p>
+                    </div>
+                    <img src="img/e2.png" alt="" class="coupon_img ">
+                </a>
+            </li>
+            <li class="coupon_item ">
+                <a href="" class="coupon_item_lk">
+                    <div class="coupon_info">
+                        <p class="mod_price coupon_price"><span style="font-size:18px;margin:0 2px;">¥</span>1200</p>
+                        <p class="coupon_desc"><span class="coupon_desc_txt">仅可购买全球购商品</span></p>
+                        <p class="coupon_limit">
+                        <span class="coupon_limit_txt">
+                         消费满110元可用
+                        </span>
+                        </p>
+                        <p class="coupon_more" clstag="">更多个护母婴券</p>
+                    </div>
+                    <img src="img/e3.png" alt="" class="coupon_img ">
+                </a>
+            </li>
+            <li class="coupon_item ">
+                <a href="" class="coupon_item_lk">
+                    <div class="coupon_info">
+                        <p class="mod_price coupon_price"><span style="font-size:18px;margin:0 2px;">¥</span>150</p>
+                        <p class="coupon_desc"><span class="coupon_desc_txt">仅可购买自营水井坊白酒部分商品</span></p>
+                        <p class="coupon_limit">
+                        <span class="coupon_limit_txt">
+                         消费满110元可用
+                        </span>
+                        </p>
+                        <p class="coupon_more" clstag="">更多食品饮料券</p>
+                    </div>
+                    <img src="img/e4.png" alt="" class="coupon_img ">
+                </a>
+            </li>
+            <li class="coupon_item ">
+                <a href="" class="coupon_item_lk">
+                    <div class="coupon_info">
+                        <p class="mod_price coupon_price"><span style="font-size:18px;margin:0 2px;">¥</span>1500</p>
+                        <p class="coupon_desc"><span class="coupon_desc_txt">仅可购买自营冰洗冷博世西门子品牌部分商品</span></p>
+                        <p class="coupon_limit">
+                        <span class="coupon_limit_txt">
+                         消费满110元可用
+                        </span>
+                        </p>
+                        <p class="coupon_more" clstag="">更多数码家电券</p>
+                    </div>
+                    <img src="img/e5.png" alt="" class="coupon_img ">
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="jiant">
+    <img src="img/1.jpg" alt="">
+    <img src="img/2.jpg" alt="">
+    <img src="img/3.jpg" alt="">
+</div>
+<!--享受生活-->
+<div class="grid_c1 ftit_inner floor"><h3>享品质</h3></div>
+<div class="g">
+    <ul style="float:left" class="sssh">
+        <li class="entry_items">
+            <a href="" class="entry_lk ">
+                <div class="entry_bg ">
+                    <div class="entry_info">
+                        <h4 class="entry_info_tit">新品首发</h4>
+                        <p class="entry_info_desc">小米手机6 预约中</p>
+                    </div>
+                </div>
+                <img src="img/f.png" alt="" class="entry_img3">
+            </a>
+        </li>
+        <li class="entry_items" style="margin-right:0px;">
+            <a href="" class="entry_lk ">
+                <div class="entry_bg " style="background: #d9cc62;">
+                    <div class="entry_info">
+                        <h4 class="entry_info_tit">会逛</h4>
+                        <p class="entry_info_desc">日淘正品好货 低至38元</p>
+                    </div>
+                </div ">
+                <img src="img/f1.png" alt="" class="entry_img3">
+            </a>
+        </li>
+        <li class="entry_items"
+        ">
+        <a href="" class="entry_lk ">
+            <div class="entry_bg" style="background: #d58717;">
+                <div class="entry_info">
+                    <h4 class="entry_info_tit">京东超市</h4>
+                    <p class="entry_info_desc">天天打折 款款实惠“尽情购”</p>
+                </div>
+            </div>
+            <img src="img/f3.png" alt="" class="entry_img3">
+        </a>
+        </li>
+        <li class="entry_items" style="margin-right:0px;">
+            <a href="" class="entry_lk ">
+                <div class="entry_bg " style="background: #7e5944;">
+                    <div class="entry_info">
+                        <h4 class="entry_info_tit">白条商城</h4>
+                        <p class="entry_info_desc">最高12期免息</p>
+                    </div>
+                </div ">
+                <img src="img/f4.png" alt="" class="entry_img3">
+            </a>
+        </li>
+    </ul>
+    <ul class="s-left">
+        <li class="entry_item ">
+            <div class="live_inner">
+                <div class="live_hd">
+                    <a href="" class="live_hd_lk">
+                        <h4 class="live_hd_lk_tit">京东直播</h4>
+                        <span class="live_hd_lk_more">更多<div class="live_hd_ico"></div></span>
+                        <ul>
+                            <li>
+                                <img src="img/zhibo1.jpg" alt="" class="entry_img ">
+                            </li>
+                        </ul>
+                    </a>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <ul class="s-di">
+        <li class="entry_items">
+            <a href="" class="entry_lk ">
+                <div class="entry_bg " style="background: #534b5d;">
+                    <div class="entry_info">
+                        <h4 class="entry_info_tit">奢侈大牌</h4>
+                        <p class="entry_info_desc">尽享品质生活 每满999减150</p>
+                    </div>
+                </div>
+                <img src="img/f7.png" alt="" class="entry_img3">
+            </a>
+        </li>
+        <li class="entry_items">
+            <a href="" class="entry_lk ">
+                <div class="entry_bg " style="background: #3b838c;">
+                    <div class="entry_info">
+                        <h4 class="entry_info_tit">智能生活</h4>
+                        <p class="entry_info_desc">时尚智能潮货</p>
+                    </div>
+                </div sty>
+                <img src="img/f8.png" alt="" class="entry_img3">
+            </a>
+        </li>
+        <li class="entry_item_8">
+            <a href="" class="entry_lk ">
+                <img src="img/f10.png" alt="" style="width:100%;height:100%;">
+                <div class="qw">
+                    <h4 class="entry_info_tit">全球尖货</h4>
+                    <p class="entry_info_desc1">全球自营好货</p>
+                </div>
+
+            </a>
+        </li>
+        <li class="entry_item_8 " style="margin-right:0px;">
+            <a href="" class="entry_lk ">
+                <img src="img/f11.png" alt="" style="width:100%;height:100%;">
+                <div class="qw" style="background: #a93931;">
+                    <h4 class="entry_info_tit">设计师推荐</h4>
+                    <p class="entry_info_desc1">体验全球好设计</p>
+                </div>
+            </a>
+        </li>
+
+    </ul>
+</div>
+<!--爱生活-->
+<div class="jiant" style="padding:0px 80px">
+    <img src="img/cb1.jpg" alt="">
+    <img src="img/cb2.jpg" alt="">
+    <img src="img/cb3.jpg" alt="">
+</div>
+<div class="grid_c1 ftit_inner "><h3>爱生活</h3></div>
+<!--爱生活第一部分-->
+<div class="ai floor">
+    <div class="ai-left">
+        <div class="al-title">
+            <h3 class="pt_tit">爱逛</h3>
+            <img src="img/erweima.png" alt="">
+            <div class="ait-right">
+                <a href="">海澜之家</a>
+                <a href="">箱包</a>
+                <a href="">大牌钟表</a>
+                <a href="">珠宝</a>
+                <a href="">奢侈品</a>
+            </div>
+        </div>
+        <div class="pt_bd_wrapper">
+            <div class="pt_cover">
+                <img src="img/as.jpg" alt="">
+            </div>
+            <div class="pt-right">
+                <span class="pt_bi_split pt_bi_split_h"></span>
+                <span class="pt_bi_split pt_bi_split_v"></span>
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit">春天花会开</p>
+                    <p class="pt_bi_promo">低至29元</p>
+                    <img src="img/we.png" alt="" class="pt_bi_img">
+                </a>
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit">大牌折扣日</p>
+                    <p class="pt_bi_promo">2件9折</p>
+                    <img src="img/we1.png" alt="" class="pt_bi_img">
+                </a>
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit">自营箱包</p>
+                    <p class="pt_bi_promo">跨店满199减100</p>
+                    <img src="img/we4.png" alt="" class="pt_bi_img">
+                </a>
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit">418耍大牌</p>
+                    <p class="pt_bi_promo">春夏新品 领券满199减100</p>
+                    <img src="img/we3.png" alt="" class="pt_bi_img">
+                </a>
+            </div>
+            <div class="pt_more">
+                <a href="" class="pt_more_item">
+                    <img src="img/cx.jpg" alt="" class="pt_more_img">
+                </a>
+                <a href="" class="pt_more_item">
+                    <img src="img/cx1.jpg" alt="" class="pt_more_img">
+                </a>
+                <a href="" class="pt_more_item" style="margin-right:0px;">
+                    <img src="img/cx3.jpg" alt="" class="pt_more_img">
+                </a>
+            </div>
+            <div class="jt2 zjt2"><</div>
+            <div class="jt2 yjt2">></div>
+            <div class="pt_ft ">
+                <div class="lt">
+
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="img/v1.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/v2.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/v3.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/v4.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/v5.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li style="border: none;">
+                            <a href="">
+                                <img src="img/v6.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="img/lt2.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/lt3.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/lt4.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/lt5.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/lt6.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li style="border: none;">
+                            <a href="">
+                                <img src="img/lt7.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="img/lt8.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/lt9.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/lt10.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/lt11.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/lt12.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li style="border: none;">
+                            <a href="">
+                                <img src="img/lt1.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="ai-left" style="margin-right:0px;">
+        <div class="al-title"
+             style="background-image: linear-gradient(90deg,#cd375e,#c1314d); background-color: #cd375e;">
+            <h3 class="pt_tit" style="background:background-color: #cd375e;">爱美丽</h3>
+            <img src="img/erweima.png" alt="">
+            <div class="ait-right1" style="">
+                <a href="">防嗮</a>
+                <a href="">底妆</a>
+                <a href="">补水保湿</a>
+                <a href="">口红</a>
+                <a href="">二免一</a>
+                <a href="">洗护大牌</a>
+            </div>
+        </div>
+        <div class="pt_bd_wrapper">
+            <div class="pt_cover">
+                <img src="img/q.jpg" alt="">
+            </div>
+            <div class="pt-right">
+                <span class="pt_bi_split pt_bi_split_h"></span>
+                <span class="pt_bi_split pt_bi_split_v"></span>
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit" style="color: #cd375e;">美妆馆</p>
+                    <p class="pt_bi_promo">尖货买2免1</p>
+                    <img src="img/q1.jpg" alt="" class="pt_bi_img">
+                </a>
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit" style="color: #cd375e;">面部护肤</p>
+                    <p class="pt_bi_promo">满199减100</p>
+                    <img src="img/q2.jpg" alt="" class="pt_bi_img">
+                </a>
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit" style="color: #cd375e;">香水彩妆</p>
+                    <p class="pt_bi_promo">满199减100</p>
+                    <img src="img/q4.jpg" alt="" class="pt_bi_img">
+                </a>
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit" style="color: #cd375e;">洗发护发</p>
+                    <p class="pt_bi_promo">满199减80</p>
+                    <img src="img/p3.jpg" alt="" class="pt_bi_img">
+                </a>
+            </div>
+            <div class="pt_more">
+                <a href="" class="pt_more_item">
+                    <img src="img/cv.jpg" alt="" class="pt_more_img">
+                </a>
+                <a href="" class="pt_more_item">
+                    <img src="img/cv1.jpg" alt="" class="pt_more_img">
+                </a>
+                <a href="" class="pt_more_item" style="margin-right:0px;">
+                    <img src="img/cv2.jpg" alt="" class="pt_more_img">
+                </a>
+            </div>
+            <div class="jt3 zjt3"><</div>
+            <div class="jt3 yjt3">></div>
+            <div class="pt_ft ">
+                <div class="lt2">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="img/zx1.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/zx2.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/zx3.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/zx4.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/zx5.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li style="border: none;">
+                            <a href="">
+                                <img src="img/zx6.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="img/zx1.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/zx2.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/zx3.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/zx4.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/zx5.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li style="border: none;">
+                            <a href="">
+                                <img src="img/zx6.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="img/zx1.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/zx2.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/zx3.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/zx4.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/zx5.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li style="border: none;">
+                            <a href="">
+                                <img src="img/zx6.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div style>
+    </div>
+</div>
+<!--家电馆-->
+<div class="ai floor">
+    <div class="ai-left">
+        <div class="al-title" style="    background-image: linear-gradient(90deg,#78538e,#674083);">
+            <h3 class="pt_tit">家电馆</h3>
+            <img src="img/erweima.png" alt="">
+            <div class="ait-right">
+                <a href="" style="background-color: #9379a5;">海澜之家</a>
+                <a href="" style="background-color: #9379a5;">箱包</a>
+                <a href="" style="background-color: #9379a5;">大牌钟表</a>
+                <a href="" style="background-color: #9379a5;">珠宝</a>
+                <a href="" style="background-color: #9379a5;">奢侈品</a>
+            </div>
+        </div>
+        <div class="pt_bd_wrapper">
+            <div class="pt_cover">
+                <img src="img/dian1.jpg" alt="">
+            </div>
+            <div class="pt-right">
+                <span class="pt_bi_split pt_bi_split_h"></span>
+                <span class="pt_bi_split pt_bi_split_v"></span>
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit" style=" color: #78538e;">秒杀限量</p>
+                    <p class="pt_bi_promo">每满2000减100</p>
+                    <img src="img/dian2.jpg" alt="" class="pt_bi_img">
+                </a>
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit" style=" color: #78538e;">冰箱洗衣机</p>
+                    <p class="pt_bi_promo">下单最高减1000元</p>
+                    <img src="img/dian3.jpg" alt="" class="pt_bi_img">
+                </a>
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit" style=" color: #78538e;">生活小家电</p>
+                    <p class="pt_bi_promo">好物低至5折</p>
+                    <img src="img/dian4.jpg" alt="" class="pt_bi_img">
+                </a>
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit" style=" color: #78538e;">爆款剃须刀</p>
+                    <p class="pt_bi_promo">飞利浦品牌直降</p>
+                    <img src="img/dian5.jpg" alt="" class="pt_bi_img">
+                </a>
+            </div>
+            <div class="pt_more">
+                <a href="" class="pt_more_item">
+                    <img src="img/cb.jpg" alt="" class="pt_more_img">
+                </a>
+                <a href="" class="pt_more_item">
+                    <img src="img/cba.jpg" alt="" class="pt_more_img">
+                </a>
+                <a href="" class="pt_more_item" style="margin-right:0px;">
+                    <img src="img/cba1.png" alt="" class="pt_more_img">
+                </a>
+            </div>
+            <div class="jt4 zjt4"><</div>
+            <div class="jt4 yjt4">></div>
+            <div class="pt_ft ">
+                <div class="lt3">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="img/p.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/p1.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/p2.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/p4.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/p5.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li style="border: none;">
+                            <a href="">
+                                <img src="img/p6.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="img/p.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/p1.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/p2.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/p4.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/p5.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li style="border: none;">
+                            <a href="">
+                                <img src="img/p6.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="img/p.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/p1.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/p2.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/p4.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/p5.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li style="border: none;">
+                            <a href="">
+                                <img src="img/p6.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ai-left" style="margin-right:0px;">
+        <div class="al-title"
+             style="background-image: linear-gradient(90deg,#5e6c90,#4c5e8c); background-color: #cd375e;">
+            <h3 class="pt_tit" style="background:background-color: #cd375e;">搞机派</h3>
+            <img src="img/erweima.png" alt="">
+            <div class="ait-right1" style="">
+                <a href="" style="background-color: #7f8ca8;">防嗮</a>
+                <a href="" style="background-color: #7f8ca8;">底妆</a>
+                <a href="" style="background-color: #7f8ca8;">补水保湿</a>
+                <a href="" style="background-color: #7f8ca8;">口红</a>
+                <a href="" style="background-color: #7f8ca8;">二免一</a>
+                <a href="" style="background-color: #7f8ca8;">洗护大牌</a>
+            </div>
+        </div>
+        <div class="pt_bd_wrapper">
+            <div class="pt_cover">
+                <img src="img/gao.jpg" alt="">
+            </div>
+            <div class="pt-right">
+                <span class="pt_bi_split pt_bi_split_h"></span>
+                <span class="pt_bi_split pt_bi_split_v"></span>
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit" style="color: #5e6c90;">新Phone尚</p>
+                    <p class="pt_bi_promo">小米6 预约抽奖</p>
+                    <img src="img/gao2.jpg" alt="" class="pt_bi_img">
+                </a>
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit" style="color: #5e6c90;">京东网厅</p>
+                    <p class="pt_bi_promo">每天1元 享800M</p>
+                    <img src="img/gao3.jpg" alt="" class="pt_bi_img">
+                </a>
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit" style="color: #5e6c90;">京选卖家</p>
+                    <p class="pt_bi_promo">诺基亚6 新品现货</p>
+                    <img src="img/gao4.jpg" alt="" class="pt_bi_img">
+                </a>
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit" style="color: #5e6c90;">24小时榜</p>
+                    <p class="pt_bi_promo">人气店铺 榜单揭秘</p>
+                    <img src="img/gao1.jpg" alt="" class="pt_bi_img">
+                </a>
+            </div>
+            <div class="pt_more">
+                <a href="" class="pt_more_item">
+                    <img src="img/ga.jpg" alt="" class="pt_more_img">
+                </a>
+                <a href="" class="pt_more_item">
+                    <img src="img/ga1.jpg" alt="" class="pt_more_img">
+                </a>
+                <a href="" class="pt_more_item" style="margin-right:0px;">
+                    <img src="img/ga2.jpg" alt="" class="pt_more_img">
+                </a>
+            </div>
+            <div class="jt5 zjt5"><</div>
+            <div class="jt5 yjt5">></div>
+            <div class="pt_ft ">
+                <div class="lt4">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="img/ji.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/ji1.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/ji2.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/ji3.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/ji4.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li style="border: none;">
+                            <a href="">
+                                <img src="img/ji5.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="img/ji.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/ji1.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/ji2.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/ji3.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/ji4.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li style="border: none;">
+                            <a href="">
+                                <img src="img/ji5.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="img/ji.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/ji1.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/ji2.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/ji3.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/ji4.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                        <li style="border: none;">
+                            <a href="">
+                                <img src="img/ji5.jpg" alt="" class="pt_logo_img1">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div style>
+    </div>
+</div>
+<!--电脑数码-->
+<div class="ai floor">
+    <div class="al-title" style="background-image: linear-gradient(90deg,#488bad,#337e8d);">
+        <h3 class="pt_tit">数码电器</h3>
+        <img src="img/erweima.png" alt="">
+        <div class="ait-right2">
+            <a href="" style="border-color: #77b6c3;
+    background-color: #6da6be;">海澜之家</a>
+            <a href="" style="border-color: #77b6c3;
+    background-color: #6da6be;">箱包</a>
+            <a href="" style="border-color: #77b6c3;
+    background-color: #6da6be;">大牌钟表</a>
+            <a href="" style="border-color: #77b6c3;
+    background-color: #6da6be;">珠宝</a>
+            <a href="" style="border-color: #77b6c3;
+    background-color: #6da6be;">奢侈品</a>
+            <a href="" style="border-color: #77b6c3;
+    background-color: #6da6be;">海澜之家</a>
+            <a href="" style="border-color: #77b6c3;
+    background-color: #6da6be;">箱包</a>
+            <a href="" style="border-color: #77b6c3;
+    background-color: #6da6be;">大牌钟表</a>
+            <a href="" style="border-color: #77b6c3;
+    background-color: #6da6be;">珠宝</a>
+            <a href="" style="border-color: #77b6c3;
+    background-color: #6da6be;">奢侈品</a>
+            <a href="" style="border-color: #77b6c3;
+    background-color: #6da6be;">珠宝</a>
+            <a href="" style="border-color: #77b6c3;
+    background-color: #6da6be;">奢侈品</a>
+        </div>
+    </div>
+    <div class="ai-left1">
+        <div class="pt_bd_wrapper1">
+            <div class="pt_cover">
+                <img src="img/shu1.jpg" alt="">
+            </div>
+            <div class="pt-right">
+                <span class="pt_bi_split pt_bi_split_h"></span>
+                <span class="pt_bi_split pt_bi_split_v"></span>
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit" style="color: #488bad;">电脑馆</p>
+                    <p class="pt_bi_promo">笔记本1999起</p>
+                    <img src="img/shu2.jpg" alt="" class="pt_bi_img">
+                </a>
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit" style="color: #488bad;">外设装备</p>
+                    <p class="pt_bi_promo">三星U盘新品上市</p>
+                    <img src="img/shu3.jpg" alt="" class="pt_bi_img">
+                </a>
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit" style="color: #488bad;">电脑配件</p>
+                    <p class="pt_bi_promo">购机赢免单！</p>
+                    <img src="img/shu4.jpg" alt="" class="pt_bi_img">
+                </a>
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit" style="color: #488bad;">办公生活</p>
+                    <p class="pt_bi_promo">日本文具 唯美治愈</p>
+                    <img src="img/shu5.jpg" alt="" class="pt_bi_img">
+                </a>
+            </div>
+            <div class="pt_more">
+                <a href="" class="pt_more_item">
+                    <img src="img/sa.jpg" alt="" class="pt_more_img">
+                </a>
+                <a href="" class="pt_more_item">
+                    <img src="img/sa1.jpg" alt="" class="pt_more_img">
+                </a>
+                <a href="" class="pt_more_item" style="margin-right:0px;">
+                    <img src="img/sa2.jpg" alt="" class="pt_more_img">
+                </a>
+            </div>
+        </div>
+        <div class="pt_bd_wrapper1" style="border: none;">
+            <div class="pt_cover">
+                <img src="img/dc.jpg" alt="">
+            </div>
+            <div class="pt-right">
+                <span class="pt_bi_split pt_bi_split_h"></span>
+                <span class="pt_bi_split pt_bi_split_v"></span>
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit" style="color: #488bad;">娱乐影音</p>
+                    <p class="pt_bi_promo">好音乐配好装备</p>
+                    <img src="img/dc1.jpg" alt="" class="pt_bi_img">
+                </a>
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit">影像盛典</p>
+                    <p class="pt_bi_promo">爆款微单低至2199</p>
+                    <img src="img/dc2.jpg" alt="" class="pt_bi_img">
+                </a>
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit">平板电脑</p>
+                    <p class="pt_bi_promo">Mac最高减800</p>
+                    <img src="img/dc3.jpg" alt="" class="pt_bi_img">
+                </a>
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit">潮配换新季</p>
+                    <p class="pt_bi_promo">领券满7减6</p>
+                    <img src="img/dc4.jpg" alt="" class="pt_bi_img">
+                </a>
+            </div>
+            <div class="pt_more">
+                <a href="" class="pt_more_item">
+                    <img src="img/nm.jpg" alt="" class="pt_more_img">
+                </a>
+                <a href="" class="pt_more_item">
+                    <img src="img/nm1.jpg" alt="" class="pt_more_img">
+                </a>
+                <a href="" class="pt_more_item" style="margin-right:0px;">
+                    <img src="img/nm3.jpg" alt="" class="pt_more_img">
+                </a>
+            </div>
+        </div>
+        <div class="jt6 zjt6"><</div>
+        <div class="jt6 yjt6">></div>
+        <div class="pt_ft1 ">
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="img/vb1.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb2.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb3.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb4.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb5.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb6.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb7.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb8.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb9.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb10.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb11.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li style="border: none;padding-right:0;">
+                    <a href="">
+                        <img src="img/vb12.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="img/vb1.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb2.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb3.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb4.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb5.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb6.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb7.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb8.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb9.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb10.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb11.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li style="border: none;padding-right:0;">
+                    <a href="">
+                        <img src="img/vb12.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="img/vb1.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb2.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb3.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb4.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb5.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb6.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb7.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb8.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb9.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb10.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/vb11.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+                <li style="border: none;padding-right:0;">
+                    <a href="">
+                        <img src="img/vb12.jpg" alt="" class="pt_logo_img1">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--爱游戏-->
+<div class="ai floor">
+    <div class="ai-left3 ">
+        <div class="al-title" style="background-image: linear-gradient(90deg,#6467a0,#544b8f);">
+            <h3 class="pt_tit">爱游戏</h3>
+            <img src="img/erweima.png" alt="">
+            <div class="ait-right">
+                <a href="" style="border-color: #9598cd;
+    background-color: #7c80af;">女神专区</a>
+                <a href="" style="border-color: #9598cd;
+    background-color: #7c80af;">装机大师</a>
+            </div>
+        </div>
+        <div class="pt_bd_wrapper2">
+            <div class="pt_cover1">
+                <img src="img/you.jpg" alt="">
+            </div>
+            <div class="pt-right3">
+                <a href="" class="pt_bi_item " ">
+                <p class="pt_bi_tit" style="color: #6467a0;">虚拟充值</p>
+                <p class="pt_bi_promo">爱奇艺 五折秒杀</p>
+                <img src="img/you1.jpg" alt="" class="pt_bi_img">
+                </a>
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit" style="color: #6467a0;">游戏社区</p>
+                    <p class="pt_bi_promo">在线解答 </p>
+                    <img src="img/you2.jpg" alt="" class="pt_bi_img">
+                </a>
+            </div>
+            <div class="pt_more">
+                <a href="" class="pt_more_item1" style="margin-right:6px;">
+                    <img src="img/kk1.jpg" alt="" class="pt_more_img1">
+                </a>
+                <a href="" class="pt_more_item1">
+                    <img src="img/kk2.jpg" alt="" class="pt_more_img1">
+                </a>
+            </div>
+            <div class="jt7 zjt7"><</div>
+            <div class="jt7 yjt7">></div>
+            <div class="pt_ft3 ">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="img/dd.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/dd2.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/dd3.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                    <li style="border: none;">
+                        <a href="">
+                            <img src="img/dd4.png" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="img/dd.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/dd2.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/dd3.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                    <li style="border: none;">
+                        <a href="">
+                            <img src="img/dd4.png" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="img/dd.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/dd2.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/dd3.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                    <li style="border: none;">
+                        <a href="">
+                            <img src="img/dd4.png" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="ai-left3">
+        <div class="al-title" style="    background-image: linear-gradient(90deg,#5981a3,#41698b);">
+            <h3 class="pt_tit">生活旅行</h3>
+            <img src="img/erweima.png" alt="">
+            <div class="ait-right">
+                <a href="" style="border-color: #82a5bc;
+    background-color: #6c90ab;
+    color: #fff;">火车票</a>
+                <a href="" style="border-color: #82a5bc;
+    background-color: #6c90ab;
+    color: #fff;">电影票</a>
+                <a href="" style="border-color: #82a5bc;
+    background-color: #6c90ab;
+    color: #fff;">机票</a>
+            </div>
+        </div>
+        <div class="pt_bd_wrapper2">
+            <div class="pt_cover1">
+                <img src="img/fly.jpg" alt="">
+            </div>
+            <div class="pt-right3">
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit" style="color: #5981a3;">特惠机票</p>
+                    <p class="pt_bi_promo">1折起飞</p>
+                    <img src="img/fly1.jpg" alt="" class="pt_bi_img">
+                </a>
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit" style="color: #5981a3;">精选酒店</p>
+                    <p class="pt_bi_promo">五星酒店 随机立减</p>
+                    <img src="img/fly2.jpg" alt="" class="pt_bi_img">
+                </a>
+            </div>
+            <div class="pt_more">
+                <a href="" class="pt_more_item1" style="margin-right:6px;">
+                    <img src="img/fly3.jpg" alt="" class="pt_more_img1">
+                </a>
+                <a href="" class="pt_more_item1">
+                    <img src="img/fly4.jpg" alt="" class="pt_more_img1">
+                </a>
+            </div>
+            <div class="jt8 zjt8"><</div>
+            <div class="jt8 yjt8">></div>
+            <div class="pt_ft4 ">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="img/aa.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/ab.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/ac.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                    <li style="border: none;">
+                        <a href="">
+                            <img src="img/ad.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="img/aa.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/ab.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/ac.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                    <li style="border: none;">
+                        <a href="">
+                            <img src="img/ad.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="img/aa.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/ab.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/ac.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                    <li style="border: none;">
+                        <a href="">
+                            <img src="img/ad.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="ai-left3" style="margin-right:0;">
+        <div class="al-title" style="background-image: linear-gradient(90deg,#5a7259,#425f41);">
+            <h3 class="pt_tit">京东金融</h3>
+            <img src="img/erweima.png" alt="">
+            <div class="ait-right">
+                <a href="" style="    border-color: #78977a;
+    background-color: #758975;">小金库</a>
+                <a href="" style="    border-color: #78977a;
+    background-color: #758975;">打白条</a>
+                <a href="" style="    border-color: #78977a;
+    background-color: #758975;">筹好物</a>
+            </div>
+        </div>
+        <div class="pt_bd_wrapper2">
+            <div class="pt_cover1">
+                <img src="img/jin.jpg" alt="">
+            </div>
+            <div class="pt-right3">
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit" style="color: #5a7259;">智能指纹锁</p>
+                    <p class="pt_bi_promo">立省1000</p>
+                    <img src="img/jin1.jpg" alt="" class="pt_bi_img">
+                </a>
+                <a href="" class="pt_bi_item ">
+                    <p class="pt_bi_tit" style="color: #5a7259;">0元试用</p>
+                    <p class="pt_bi_promo">电动滑板车</p>
+                    <img src="img/jin2.jpg" alt="" class="pt_bi_img">
+                </a>
+            </div>
+            <div class="pt_more">
+                <a href="" class="pt_more_item1" style="margin-right:6px;">
+                    <img src="img/jin3.jpg" alt="" class="pt_more_img1">
+                </a>
+                <a href="" class="pt_more_item1">
+                    <img src="img/jin5.jpg" alt="" class="pt_more_img1">
+                </a>
+            </div>
+            <div class="jt9 zjt9"><</div>
+            <div class="jt9 yjt9">></div>
+            <div class="pt_ft5 ">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="img/jin6.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/jin8.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/jin9.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                    <li style="border: none;">
+                        <a href="">
+                            <img src="img/jin10.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="img/jin6.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/jin8.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/jin9.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                    <li style="border: none;">
+                        <a href="">
+                            <img src="img/jin10.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="img/jin6.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/jin8.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/jin9.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                    <li style="border: none;">
+                        <a href="">
+                            <img src="img/jin10.jpg" alt="" class="pt_logo_img2">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!--购特色-->
+<div class="grid_c1 ftit_inner"><h3>购特色</h3></div>
+<div class="gou">
+    <ul class="list">
+        <li class="entry_item1">
+            <a href="" class="entry_lk1">
+                <div class="entry_bg1" style="background:#886049">
+                    <div class="entry_info1">
+                        <h4 class="entry_info_tit2">司法拍卖</h4>
+                        <p class="entry_info_desc2">法院好货 公开抢拍</p>
+                    </div>
+
+                </div>
+                <img src="img/fa1.jpg" alt="" class="entry_img1">
+            </a>
+        </li>
+        <li class="entry_item1">
+            <a href="" class="entry_lk1">
+                <div class="entry_bg1" style="background: #74567B;">
+                    <div class="entry_info1">
+                        <h4 class="entry_info_tit2">环球时尚</h4>
+                        <p class="entry_info_desc2">环球名品，奢华精选</p>
+                    </div>
+
+                </div>
+                <img src="img/te.jpg" alt="" class="entry_img1">
+            </a>
+        </li>
+        <li class="entry_item1">
+            <a href="" class="entry_lk1">
+                <div class="entry_bg1" style="background: #ca3030;">
+                    <div class="entry_info1">
+                        <h4 class="entry_info_tit2">品牌特卖</h4>
+                        <p class="entry_info_desc2">京东闪购 品牌限时特卖</p>
+                    </div>
+
+                </div>
+                <img src="img/te1.jpg" alt="" class="entry_img1">
+            </a>
+        </li>
+        <li class="entry_item1">
+            <a href="" class="entry_lk1">
+                <div class="entry_bg1" style="background: #459263;">
+                    <div class="entry_info1">
+                        <h4 class="entry_info_tit2">京东健康</h4>
+                        <p class="entry_info_desc2">药品医疗营养滋补计生</p>
+                    </div>
+
+                </div>
+                <img src="img/te8.jpg" alt="" class="entry_img1">
+            </a>
+        </li>
+        <li class="entry_item1">
+            <a href="" class="entry_lk1">
+                <div class="entry_bg1" style="background: #da5d40;">
+                    <div class="entry_info1">
+                        <h4 class="entry_info_tit2">陪伴宝宝</h4>
+                        <p class="entry_info_desc2">年化收益4.5%</p>
+                    </div>
+
+                </div>
+                <img src="img/te9.jpg" alt="" class="entry_img1">
+            </a>
+        </li>
+        <li class="entry_item1">
+            <a href="" class="entry_lk1">
+                <div class="entry_bg1" style="background: #4f87b1;">
+                    <div class="entry_info1">
+                        <h4 class="entry_info_tit2">企业购</h4>
+                        <p class="entry_info_desc2">购新品返200元E卡</p>
+                    </div>
+
+                </div>
+                <img src="img/te4.jpg" alt="" class="entry_img1">
+            </a>
+        </li>
+        <li class="entry_item1">
+            <a href="" class="entry_lk1">
+                <div class="entry_bg1" style="background: #d5bb09;">
+                    <div class="entry_info1">
+                        <h4 class="entry_info_tit2">IN货推荐</h4>
+                        <p class="entry_info_desc2">助力公路车直降2300元</p>
+                    </div>
+
+                </div>
+                <img src="img/te6.jpg" alt="" class="entry_img1">
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="jiant" style="padding:0px 80px">
+    <img src="img/vs3.png" alt="">
+    <img src="img/vs.jpg" alt="">
+    <img src="img/vs2.jpg" alt="">
+</div>
+<div class="grid_c1 ftit_inner floor"><h3>还没逛够</h3></div>
+<div class="guang">
+    <ul>
+        <li style="margin-left:0px;">
+            <a href="">
+                <img src="img/h.png" alt="" class="more_photo">
+                <div class="more_info">
+                    <p class="more_info_name">
+                        巴拉巴拉男童短袖t恤中大童上衣童装季纯色T恤男28172151140浅花灰110</p>
+                    <p class="J_more_info_price more_info_price mod_price"><span>¥</span>
+                    <span class="more_info_price_txt">
+                   59.0</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="img/r1.jpg" alt="" class="more_photo">
+                <div class="more_info">
+                    <p class="more_info_name">松下（Panasonic）电动剃须刀ES-RF31-S405 快速充电 智能4刀头 刮胡刀</p>
+                    <p class="J_more_info_price more_info_price mod_price"><span>¥</span>
+                    <span class="more_info_price_txt">
+                   59.0</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="img/r2.jpg" alt="" class="more_photo">
+                <div class="more_info">
+                    <p class="more_info_name">【京东超市】怡口莲 原味 牛奶糖 90g</p>
+                    <p class="J_more_info_price more_info_price mod_price"><span>¥</span>
+                    <span class="more_info_price_txt">
+                   59.0</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="img/r3.jpg" alt="" class="more_photo">
+                <div class="more_info">
+                    <p class="more_info_name">【京东超市】三只松鼠 肉干肉脯 零食休闲食品猪肉脯210g/袋</p>
+                    <p class="J_more_info_price more_info_price mod_price"><span>¥</span>
+                    <span class="more_info_price_txt">
+                   59.0</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="img/r4.jpg" alt="" class="more_photo">
+                <div class="more_info">
+                    <p class="more_info_name">【京东超市】泰国进口 休闲零食 小老板 烤海苔卷 脆紫菜卷</p>
+                    <p class="J_more_info_price more_info_price mod_price"><span>¥</span>
+                    <span class="more_info_price_txt">
+                   59.0</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li style="margin-left:0px;">
+            <a href="">
+                <img src="img/o1.jpg" alt="" class="more_photo">
+                <div class="more_info">
+                    <p class="more_info_name">【京东超市】伊利全脂甜（方便装）奶粉400g （新老包装随机发货）</p>
+                    <p class="J_more_info_price more_info_price mod_price"><span>¥</span>
+                    <span class="more_info_price_txt">
+                   59.0</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="img/o2.jpg" alt="" class="more_photo">
+                <div class="more_info">
+                    <p class="more_info_name">
+                        巴拉巴拉男童短袖t恤中大童上衣童装季纯色T恤男28172151140浅花灰110</p>
+                    <p class="J_more_info_price more_info_price mod_price"><span>¥</span>
+                    <span class="more_info_price_txt">
+                   59.0</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="img/o3.jpg" alt="" class="more_photo">
+                <div class="more_info">
+                    <p class="more_info_name">
+                        巴拉巴拉男童短袖t恤中大童上衣童装季纯色T恤男28172151140浅花灰110</p>
+                    <p class="J_more_info_price more_info_price mod_price"><span>¥</span>
+                    <span class="more_info_price_txt">
+                   59.0</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="img/o4.jpg" alt="" class="more_photo">
+                <div class="more_info">
+                    <p class="more_info_name">
+                        巴拉巴拉男童短袖t恤中大童上衣童装季纯色T恤男28172151140浅花灰110</p>
+                    <p class="J_more_info_price more_info_price mod_price"><span>¥</span>
+                    <span class="more_info_price_txt">
+                   59.0</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="img/o5.jpg" alt="" class="more_photo">
+                <div class="more_info">
+                    <p class="more_info_name">
+                        巴拉巴拉男童短袖t恤中大童上衣童装季纯色T恤男28172151140浅花灰110</p>
+                    <p class="J_more_info_price more_info_price mod_price"><span>¥</span>
+                    <span class="more_info_price_txt">
+                   59.0</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li style="margin-left:0px;">
+            <a href="">
+                <img src="img/o6.jpg" alt="" class="more_photo">
+                <div class="more_info">
+                    <p class="more_info_name">
+                        巴拉巴拉男童短袖t恤中大童上衣童装季纯色T恤男28172151140浅花灰110</p>
+                    <p class="J_more_info_price more_info_price mod_price"><span>¥</span>
+                    <span class="more_info_price_txt">
+                   59.0</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="img/o7.jpg" alt="" class="more_photo">
+                <div class="more_info">
+                    <p class="more_info_name">
+                        巴拉巴拉男童短袖t恤中大童上衣童装季纯色T恤男28172151140浅花灰110</p>
+                    <p class="J_more_info_price more_info_price mod_price"><span>¥</span>
+                    <span class="more_info_price_txt">
+                   59.0</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="img/o8.jpg" alt="" class="more_photo">
+                <div class="more_info">
+                    <p class="more_info_name">
+                        巴拉巴拉男童短袖t恤中大童上衣童装季纯色T恤男28172151140浅花灰110</p>
+                    <p class="J_more_info_price more_info_price mod_price"><span>¥</span>
+                    <span class="more_info_price_txt">
+                   59.0</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="img/o9.jpg" alt="" class="more_photo">
+                <div class="more_info">
+                    <p class="more_info_name">
+                        巴拉巴拉男童短袖t恤中大童上衣童装季纯色T恤男28172151140浅花灰110</p>
+                    <p class="J_more_info_price more_info_price mod_price"><span>¥</span>
+                    <span class="more_info_price_txt">
+                   59.0</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="img/o10.jpg" alt="" class="more_photo">
+                <div class="more_info">
+                    <p class="more_info_name">
+                        巴拉巴拉男童短袖t恤中大童上衣童装季纯色T恤男28172151140浅花灰110</p>
+                    <p class="J_more_info_price more_info_price mod_price"><span>¥</span>
+                    <span class="more_info_price_txt">
+                   59.0</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li style="margin-left:0px;">
+            <a href="">
+                <img src="img/o11.jpg" alt="" class="more_photo">
+                <div class="more_info">
+                    <p class="more_info_name">
+                        巴拉巴拉男童短袖t恤中大童上衣童装季纯色T恤男28172151140浅花灰110</p>
+                    <p class="J_more_info_price more_info_price mod_price"><span>¥</span>
+                    <span class="more_info_price_txt">
+                   59.0</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="img/o12.jpg" alt="" class="more_photo">
+                <div class="more_info">
+                    <p class="more_info_name">
+                        巴拉巴拉男童短袖t恤中大童上衣童装季纯色T恤男28172151140浅花灰110</p>
+                    <p class="J_more_info_price more_info_price mod_price"><span>¥</span>
+                    <span class="more_info_price_txt">
+                   59.0</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="img/o13.jpg" alt="" class="more_photo">
+                <div class="more_info">
+                    <p class="more_info_name">
+                        巴拉巴拉男童短袖t恤中大童上衣童装季纯色T恤男28172151140浅花灰110</p>
+                    <p class="J_more_info_price more_info_price mod_price"><span>¥</span>
+                    <span class="more_info_price_txt">
+                   59.0</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="img/o14.jpg" alt="" class="more_photo">
+                <div class="more_info">
+                    <p class="more_info_name">
+                        巴拉巴拉男童短袖t恤中大童上衣童装季纯色T恤男28172151140浅花灰110</p>
+                    <p class="J_more_info_price more_info_price mod_price"><span>¥</span>
+                    <span class="more_info_price_txt">
+                   59.0</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="img/o15.jpg" alt="" class="more_photo">
+                <div class="more_info">
+                    <p class="more_info_name">
+                        巴拉巴拉男童短袖t恤中大童上衣童装季纯色T恤男28172151140浅花灰110</p>
+                    <p class="J_more_info_price more_info_price mod_price"><span>¥</span>
+                    <span class="more_info_price_txt">
+                   59.0</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li style="margin-left:0px;">
+            <a href="">
+                <img src="img/o16.jpg" alt="" class="more_photo">
+                <div class="more_info">
+                    <p class="more_info_name">
+                        巴拉巴拉男童短袖t恤中大童上衣童装季纯色T恤男28172151140浅花灰110</p>
+                    <p class="J_more_info_price more_info_price mod_price"><span>¥</span>
+                    <span class="more_info_price_txt">
+                   59.0</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="img/o17.jpg" alt="" class="more_photo">
+                <div class="more_info">
+                    <p class="more_info_name">
+                        巴拉巴拉男童短袖t恤中大童上衣童装季纯色T恤男28172151140浅花灰110</p>
+                    <p class="J_more_info_price more_info_price mod_price"><span>¥</span>
+                    <span class="more_info_price_txt">
+                   59.0</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="img/o2.jpg" alt="" class="more_photo">
+                <div class="more_info">
+                    <p class="more_info_name">
+                        巴拉巴拉男童短袖t恤中大童上衣童装季纯色T恤男28172151140浅花灰110</p>
+                    <p class="J_more_info_price more_info_price mod_price"><span>¥</span>
+                    <span class="more_info_price_txt">
+                   59.0</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="img/o19.jpg" alt="" class="more_photo">
+                <div class="more_info">
+                    <p class="more_info_name">
+                        巴拉巴拉男童短袖t恤中大童上衣童装季纯色T恤男28172151140浅花灰110</p>
+                    <p class="J_more_info_price more_info_price mod_price"><span>¥</span>
+                    <span class="more_info_price_txt">
+                   59.0</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="img/o20.jpg" alt="" class="more_photo">
+                <div class="more_info">
+                    <p class="more_info_name">
+                        巴拉巴拉男童短袖t恤中大童上衣童装季纯色T恤男28172151140浅花灰110</p>
+                    <p class="J_more_info_price more_info_price mod_price"><span>¥</span>
+                    <span class="more_info_price_txt">
+                   59.0</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+<footer class="tianmao-bottom">
+    <!-- 第一部分 -->
+    <div class="tmbottom">
+        <ul class="s1">
+            <li class="mod_service_item">
+                <div class="mod_service_unit">
+                    <h5 class="mod_service_tit mod_service_duo">多</h5>
+                    <p class="mod_service_txt">品类齐全，轻松购物</p>
+                </div>
+            </li>
+            <li class="mod_service_item">
+                <div class="mod_service_unit">
+                    <h5 class="mod_service_tit mod_service_kuai">快</h5>
+                    <p class="mod_service_txt">多仓直发，极速配送</p>
+                </div>
+            </li>
+            <li class="mod_service_item">
+                <div class="mod_service_unit">
+                    <h5 class="mod_service_tit mod_service_hao">多</h5>
+                    <p class="mod_service_txt">正品行货，精致服务</p>
+                </div>
+            </li>
+            <li class="mod_service_item">
+                <div class="mod_service_unit">
+                    <h5 class="mod_service_tit mod_service_sheng">多</h5>
+                    <p class="mod_service_txt">天天低价，畅选无忧</p>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+    <!-- 第二部分 -->
+    <div class="tmbottom2">
+        <dl class="tmall-service">
+            <dt class="tmall-help">购物指南</dt>
+            <dd class="tmall-details"><a href="">购物流程</a></dd>
+            <dd class="tmall-details"><a href="">会员介绍</a></dd>
+            <dd class="tmall-details"><a href="">生活旅行</a></dd>
+            <dd class="tmall-details"><a href="">常见问题</a></dd>
+            <dd class="tmall-details"><a href="">大家电</a></dd>
+            <dd class="tmall-details"><a href="">联系客服</a></dd>
+        </dl>
+        <dl class="tmall-service">
+            <dt class="tmall-help">配送方式</dt>
+            <dd class="tmall-details"><a href="">上门自提</a></dd>
+            <dd class="tmall-details"><a href="">211限时送达</a></dd>
+            <dd class="tmall-details"><a href="">配送服务查询</a></dd>
+            <dd class="tmall-details"><a href="">配送费收取标准</a></dd>
+            <dd class="tmall-details"><a href="">配送服务查询</a></dd>
+            <dd class="tmall-details"><a href="">海外配送</a></dd>
+        </dl>
+        <dl class="tmall-service">
+            <dt class="tmall-help">支付方式</dt>
+            <dd class="tmall-details"><a href="">货到付款</a></dd>
+            <dd class="tmall-details"><a href="">在线支付</a></dd>
+            <dd class="tmall-details"><a href="">分期付款</a></dd>
+            <dd class="tmall-details"><a href="">邮局汇款</a></dd>
+            <dd class="tmall-details"><a href="">公司转账</a></dd>
+        </dl>
+        <dl class="tmall-service">
+            <dt class="tmall-help">售后服务</dt>
+            <dd class="tmall-details"><a href="">售后政策</a></dd>
+            <dd class="tmall-details"><a href="">价格保护</a></dd>
+            <dd class="tmall-details"><a href="">退款服务</a></dd>
+            <dd class="tmall-details"><a href="">返修/退换货</a></dd>
+            <dd class="tmall-details"><a href="">取消订单</a></dd>
+        </dl>
+        <dl class="tmall-service">
+            <dt class="tmall-help">特色服务</dt>
+            <dd class="tmall-details"><a href="">夺宝岛</a></dd>
+            <dd class="tmall-details"><a href="">DIY装机</a></dd>
+            <dd class="tmall-details"><a href="">延保服务</a></dd>
+            <dd class="tmall-details"><a href="">京东E卡</a></dd>
+            <dd class="tmall-details"><a href="">京东通信</a></dd>
+            <dd class="tmall-details"><a href="">京东JD+</a></dd>
+        </dl>
+        <dl class="tmall-service" style="height:150px;width:200px">
+            <dt class="tmall-help">京东自营服务覆盖区</dt>
+            <dd class="tmall-details" style="width:170px;"><a href="">
+                京东已向全国2661个区县提供自营配送服务
+                ，支持货到付款、POS机刷卡和售后上门服务。
+            </a></dd>
+        </dl>
+    </div>
+    <!-- 第三部分 -->
+    <div class="tmbottom3">
+        <div class="tmall-third">
+            <div class="tmall-about1 tmall-about2">
+                <a href="">关于我们</a></div>
+            <div class="tmall-about1"><a href="">联系我们</a></div>
+            <div class="tmall-about1"><a href="">联系客服</a></div>
+            <div class="tmall-about1"><a href="">合作招商</a></div>
+            <div class="tmall-about1"><a href="">商家帮助</a></div>
+            <div class="tmall-about1"><a href="">营销中心</a></div>
+            <div class="tmall-about1"><a href="">手机京东</a></div>
+            <div class="tmall-about1"><a href="">友情链接</a></div>
+            <div class="tmall-about1"><a href="">销售联盟</a></div>
+            <div class="tmall-about1"><a href="">京东社区</a></div>
+            <div class="tmall-about1"><a href="">风险监测</a></div>
+            <div class="tmall-about1"><a href="">隐私政策</a></div>
+            <div class="tmall-about1"><a href="">京东公益</a></div>
+            <div class="tmall-about1"><a href="">English site</a></div>
+            <div class="tmall-about1"><a href="">Contact Us</a></div>
+        </div>
+    </div>
+    <div class="tmall-third" style="margin-left:260px;">
+        <div class="tmall-have"><a href="">京ICP证070359号</a></div>
+        <div class="tmall-have">互联网药品信息服务资格证编号(京)-经营性-2014-0008</a></div>
+        <div class="tmall-have">互联网药品交易服务资格证书 国A20150001</div>
+        <div class="tmall-have" style="border:none;">新出发京零&nbsp;字第大120007号</div>
+    </div>
+    <div class="tmall-third" style="margin-left:250px;">
+        <div class="tmall-have1">互联网出版许可证编号新出网证(京)字150号</div>
+        <div class="tmall-have1">出版物经营许可证</div>
+        <div class="tmall-have1">网络文化经营许可证京网文[2014]2148-348号</div>
+        <div class="tmall-have1" style="border:none;"><span>违法和不良信息举报电话：4006561155</span></div>
+    </div>
+    <div class="tmall-third" style="margin-left:550px;">
+        <div class="tmall-have1" style="border:none;">
+            <span>Copyright&nbsp;©&nbsp;2004&nbsp;-&nbsp;2017&nbsp;&nbsp;京东JD.com&nbsp;版权所有</span></div>
+    </div>
+    <div class="tmall-coprright shangbiao">
+        <div class="mod_copyright_auth_ico mod_copyright_auth_ico_1">
+        </div>
+        <div class="mod_copyright_auth_ico mod_copyright_auth_ico_2"></div>
+        <div class="mod_copyright_auth_ico mod_copyright_auth_ico_3"></div>
+        <div class="mod_copyright_auth_ico mod_copyright_auth_ico_4"></div>
+        <div class="mod_copyright_auth_ico mod_copyright_auth_ico_5"></div>
+        <div class="mod_copyright_auth_ico mod_copyright_auth_ico_6"></div>
+    </div>
+    <p></p>
+    </div>
+</footer>
+<!--左边定位-->
+<div class="dingwei">
+    <ul>
+        <li class="itw">
+            <p>享品<span>质</span></p>
+        </li>
+        <li class="itw">
+            <p>服饰<span>美妆</span></p>
+        </li>
+        <li class="itw">
+            <p>家电<span>手机</span></p>
+        </li>
+        <li class="itw">
+            <p>电脑<span>数码</span></p>
+        </li>
+        <li>
+            <p>3&nbsp;C<span>运动<span></p>
+        </li>
+        <li style="height: 30px;">
+            <p>爱吃</p>
+        </li>
+        <li>
+            <p>母婴<span>家居</span></p>
+        </li>
+        <li>
+            <p>图书<span>汽车</span></p>
+        </li>
+        <li style="height: 30px;" class="itw">
+            <p>虚拟</p>
+        </li>
+        <li class="itw">
+            <p>还没<span>逛够</span></p>
+        </li>
+        <li style="background: #534141;" class="top">
+            <p>顶部<span>▲</span></p>
+        </li>
+    </ul>
+</div>
+<!--定位2-->
+<div class="bar">
+    <div class="item">
+        <div class="it-con con1"></div>
+        <div class="min">京东会员</div>
+    </div>
+    <div class="item" style="top:196px;">
+        <div class="it-con con2"></div>
+        <div class="min">购物车</div>
+    </div>
+    <div class="item" style="top:232px;">
+        <div class="it-con con3"></div>
+        <div class="min">我的关注</div>
+    </div>
+    <div class="item" style="top:268px;">
+        <div class="it-con con4"></div>
+        <div class="min">我的足迹</div>
+    </div>
+    <div class="item" style="top:304px;">
+        <div class="it-con con5"></div>
+        <div class="min">我的消息</div>
+    </div>
+    <div class="item" style="top:340px;">
+        <div class="it-con con6"></div>
+        <div class="min">咨询JIMI</div>
+    </div>
+    <div class="item" style="top:563px;">
+        <div class="it-con con7 top"></div>
+        <div class="min top">顶部</div>
+    </div>
+    <div class="item" style="top:600px;">
+        <div class="it-con con8"></div>
+        <div class="min">反馈</div>
+    </div>
+</body>
+</html>
