@@ -4,10 +4,35 @@
 * @Last Modified by:   dell
 * @Last Modified time: 2017-03-16 19:04:43
 */
+
+.jts{
+    display: none;
+    z-index:10;
+    width:50px;
+    height:70px;
+    background:rgba(0,0,0,0.5);
+    text-align: center;
+    line-height: 70px;
+    margin:auto;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    font-size:25px;
+    color:#fff;
+
+}
+.jts1{
+    left:232px ;
+}
+.jts2{
+    right:0px;
+}
 header {
     width: 100%;
     background: #333333;
     height: 40px;
+
+
 }
 .sd{
     z-index:-1;

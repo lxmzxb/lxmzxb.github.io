@@ -499,7 +499,7 @@
             this.widths = window.innerWidth - 130;
             this.startcontrol = true;
             this.st = null;
-            this.bestScore = localStorage.bestScore ? JSON.parse(localStorage.bestScore) : [];
+            this.bestScore = localStorage.bestScore ? JSON.parse(localStorage.bestScore) : [ ];
 
         }
 
@@ -638,23 +638,26 @@
                     console.log(this.bestScore);
                     localStorage.bestScore = JSON.stringify(this.bestScore);
                 }
-                var over= document.querySelector(".gameover");
-                var val=getData();
-                maxscore.innerHTML=val[0].score;
-                over.style.display="block";
+
             }
+            var over= document.querySelector(".gameover");
+            var val=getData();
+            maxscore.innerHTML=val[0].score;
+            lifeinner.style.backgroundSize = "100% 100%";
+            over.style.display="block";
             this.main.innerHTML = "";
             this.obj = {};
             this.score = 0;
             this.state = 1;
             this.speed = 5;
             this.live = 5;
-            this.liveele.innerHtml = 5;
-            this.scoreele.innerHTML = 0;
+//            this.liveele.innerHtml = 5;
+            score1.innerHTML=0;
             this.stateele.innerHTML ="关卡"+1;
             this.startcontrol = false;
             this.startcontrol=true;
             this.st = null;
+
         }
 
         pause() {

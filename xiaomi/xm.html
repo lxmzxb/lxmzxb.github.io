@@ -9,6 +9,10 @@
 </head>
 <script>
     window.onload = function () {
+        var v=document.querySelector(".jts1");
+        var sk=document.querySelector(".jts2");
+
+
         var banner = document.querySelector(".banner");
         var lbt = document.querySelectorAll(".banner img");
         var dian = document.querySelectorAll(".box ul li");
@@ -31,9 +35,13 @@
 
             banner.onmouseover = function () {
                 clearInterval(window.t);
+                sk.style.display="block";
+                v.style.display="block";
             }
             banner.onmouseout = function () {
                 window.t = setInterval(move, 2000);
+                sk.style.display="none";
+                v.style.display="none";
             }
         });
 
@@ -54,7 +62,16 @@
             l = lbt[num];
 
         }
-
+        sk.onclick=function () {
+            move();
+        }
+        v.onclick=function () {
+            if(num==0){
+                num=dian.length;
+            }
+            num-=2;
+            move();
+        }
         //左右箭头滑动的效果
         var ul = document.querySelector(".lunbokuang");
         var m = document.querySelector(".ming-picture");
@@ -844,6 +861,8 @@
 
 <!-- Banner开始-->
 <div class="banner">
+    <div class="jts jts1"><</div>
+    <div class="jts jts2"> ></div>
     <ul>
         <li><img src="Images/xmad_14881809624872_TkBal.jpg" alt="" class="banner img"></li>
         <li><img src="Images/banner.jpg" alt="" class="banner img"></li>
@@ -1025,65 +1044,50 @@
                         </ul>
                         <ul  class="ssf" style="margin-top: 0px;">
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-                                <span>小米6</span>
-                                <div class="hhi">选购</div>
+                                <img src="Images/m1.jpg" alt="" >
+                                <span>小米电视4A 49英寸版</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/m2.jpg" alt="" >
+                                <span>小米电视4A 49英寸版</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/m3.png" alt="" >
+                                <span>小米电视4A 49英寸版</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/m4.png" alt="" >
+                                <span>小米电视4A 49英寸版</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/m5.jpg" alt="" >
+                                <span>小米电视4A 49英寸版</span>>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/m6.png" alt="" >
+                                <span>小米电视4A 49英寸版</span>
                             </li>
                         </ul>
                         <ul  class="ssf" style="margin-top: 0px;">
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
+                                <img src="Images/m7.png" alt="" >
 
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <span>小米电视4A 49英寸版</span>
+                            </li>
+                            <li class="ar-list">
+                                <img src="Images/m8.jpg" alt="" >
+
+                                <span>小米电视4A 49英寸版</span>
+                            </li>
+                            <li class="ar-list">
+                                <img src="Images/m8.jpg" alt="" >
+
+                                <span>小米电视4A 49英寸版</span>
                             </li>
                             <li class="ar-list">
                                 <img src="Images/a/a_05.png" alt="" >
 
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <span>小米电视4A 49英寸版</span>
                             </li>
                         </ul>
                     </div>
@@ -1096,130 +1100,91 @@
                     <div class="aside-right" style="width:1000px;">
                         <ul  class="ssf" style="margin-top: 0px;">
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/jia.jpg" alt="" >
+                                <img src="Images/jia.jpg" alt="" >
+                                <span>米家扫地机器人</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/VRPLAY2.png" alt="" >
+                                <span>小米VR眼镜</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/luyouqi-80.jpg" alt="" >
+                                <span>小米路由器</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/scooter.jpg" alt="" >
+                                <span>九号平衡车</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/zxc80-80.jpg" alt="" >
+                                <span>电助力折叠自行车</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/shuihu80.jpg" alt="" >
+                                <span>米家恒温电水壶</span>
                             </li>
                         </ul>
                         <ul  class="ssf" style="margin-top: 0px;">
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/czjhq80.jpg" alt="" >
+                                <span>米家车载空气净化器</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/dianhuashoubiao80.jpg" alt="" >
+                                <span>手表</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/dianfanbao-80.jpg" alt="" >
+                                <span>米家智能电饭煲</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/xiaobai80.jpg" alt="" >
+                                <span>智能摄像机</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/jinghuaqilvxin80.jpg" alt="" >
+                                <span>空气净化器及滤芯</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/jinghuaqilvxin80.jpg" alt="" >
+                                <span>空气净化器及滤芯</span>
                             </li>
                         </ul>
                         <ul  class="ssf" style="margin-top: 0px;">
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/xueyaji-80.jpg" alt="" >
+                                <span>血压计</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/jiqiren80.jpg" alt="" >
+                                <span>米兔积木</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/zhinengdeng-80.jpg" alt="" >
+                                <span>智能灯</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/gushiji80.jpg" alt="" >
+                                <span>米兔智能故事机</span>
                             </li>
                         </ul>
                         <ul  class="ssf" style="margin-top: 0px;">
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/zhinengjiatingtaozhuang-80.jpg" alt="" >
+                                <span >智能家庭联合</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/zhinengjiatingtaozhuang-80.jpg" alt="" >
+                                <span >智能家庭联合</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/wurenji80.jpg" alt="" >
+                                <span>小米无人机</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/jly80.jpg" alt="" >
+                                <span>米家行车记录仪</span>
                             </li>
                         </ul>
                     </div>
@@ -1229,37 +1194,27 @@
                 <li  class="has_right">
                     <span>移动电源 插线板</span>
                     <span class="right">></span>
-                    <div class="aside-right" style="width:1000px;">
+                    <div class="aside-right" style="width:500px;">
                         <ul  class="ssf" style="margin-top: 0px;">
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/dianyuan280.jpg" alt="" >
+                                <span>小米移动电源</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/c1xb343.jpg" alt="" >
+                                <span>插线板</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/yidongdianyuan.jpg" alt="" >
+                                <span>品牌移动电源</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/dianyuanfujian.jpg" alt="" >
+                                <span>移动电源事件</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/chongdianqi-80.jpg" alt="" >
+                                <span>移动电源附件</span>
                             </li>
                             <li class="ar-list">
                                 <img src="Images/a/a_05.png" alt="" >
@@ -1270,66 +1225,12 @@
                         </ul>
                         <ul  class="ssf" style="margin-top: 0px;">
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/5Battery1.jpg" alt="" >
+                                <span>1号彩色电池</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                        </ul>
-                        <ul  class="ssf" style="margin-top: 0px;">
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/wlyx80.jpg" alt="" >
+                                <span>7号彩色电池</span>
                             </li>
                         </ul>
                     </div>
@@ -1339,40 +1240,32 @@
                 <li  class="has_right">
                     <span>耳机 音箱</span>
                     <span class="right">></span>
-                    <div class="aside-right" style="width:1000px;">
+                    <div class="aside-right" style="width:px;"800>
                         <ul  class="ssf" style="margin-top: 0px;">
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/toudai80.jpg" alt="" >
+                                <span>小米头戴式耳机</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/tdsqs80.jpg" alt="" >
+                                <span>头戴式耳机轻松版</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/qtpro80.jpg" alt="" >
+                                <span>小米圈铁耳机</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
+                                <img src="Images/quantie.jpg" alt="" >
 
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <span>小米圈铁耳机</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
+                                <img src="Images/pinpai80.jpg" alt="" >
 
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <span>小米圈铁耳机</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
+                                <img src="Images/wlyx80.jpg" alt="" >
 
                                 <div class="hhi">选购</div>
                                 <span>小米6</span>
@@ -1449,106 +1342,14 @@
                 <li  class="has_right">
                     <span>保护套 贴膜</span>
                     <span class="right">></span>
-                    <div class="aside-right" style="width:1000px;">
+                    <div class="aside-right" style="width:200px;">
                         <ul  class="ssf" style="margin-top: 0px;">
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/tiemo.jpg" alt="" >
+                                <span>贴膜</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                        </ul>
-                        <ul  class="ssf" style="margin-top: 0px;">
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                        </ul>
-                        <ul  class="ssf" style="margin-top: 0px;">
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
+                                <img src="Images/baohu.jpg" alt="" >
                                 <span>小米6</span>
                             </li>
                         </ul>
@@ -1559,108 +1360,26 @@
                 <li class="has_right">
                     <span> 线材 支架 存储卡</span>
                     <span class="right">></span>
-                    <div class="aside-right" style="width:1000px;">
+                    <div class="aside-right" style="width:200px;">
                         <ul  class="ssf" style="margin-top: 0px;">
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/xiancai.jpg" alt="" >
+                                <span>素材</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
+                                <img src="Images/zipaigan.jpg" alt="" >
 
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <span>自拍杆</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/zhijia.jpg" alt="" >
+                                <span>手机支架</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/cunchu.jpg" alt="" >
+                                <span>存储卡</span>
                             </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
 
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                        </ul>
-                        <ul  class="ssf" style="margin-top: 0px;">
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                        </ul>
-                        <ul  class="ssf" style="margin-top: 0px;">
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
                         </ul>
                     </div>
                 </li>
@@ -1669,107 +1388,28 @@
                 <li  class="has_right">
                     <span>箱包 服饰</span>
                     <span class="right">></span>
-                    <div class="aside-right" style="width:1000px;">
+                    <div class="aside-right" style="width:200px;">
                         <ul  class="ssf" style="margin-top: 0px;">
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
+                                <img src="Images/xiangbao-80 (1).jpg" alt="" >
+                                <span> 箱包</span>
+                            </li>
+                            <li class="ar-list">
+                                <img src="Images/lvxingxiang.jpg" alt="" >
+                                <span>90分旅行箱</span>
+                            </li>
+                            <li class="ar-list">
+                                <img src="Images/huise2-80.jpg" alt="" >
+                                <span>服饰</span>
+                            </li>
+                            <li class="ar-list">
+                                <img src="Images/ydx80.jpg" alt="" >
 
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <span>小米运动鞋智能版</span>
                             </li>
                             <li class="ar-list">
                                 <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                        </ul>
-                        <ul  class="ssf" style="margin-top: 0px;">
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                        </ul>
-                        <ul  class="ssf" style="margin-top: 0px;">
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <span>TS太阳镜</span>
                             </li>
                         </ul>
                     </div>
@@ -1779,107 +1419,28 @@
                 <li  class="has_right"s>
                     <span>米兔 生活周边</span>
                     <span class="right">></span>
-                    <div class="aside-right" style="width:1000px;">
+                    <div class="aside-right" style="width:200px;">
                         <ul  class="ssf" style="margin-top: 0px;">
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/mitu-80.jpg" alt="" >
+                                <span>米兔玩偶</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/zhoubian1.jpg" alt="" >
+                                <span>生活周边</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/zazhi1021-80.jpg" alt="" >
+                                <span>小米会刊</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
+                                <img src="Images/mj80.jpg" alt="" >
 
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <span>毛巾</span>
                             </li>
                             <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                        </ul>
-                        <ul  class="ssf" style="margin-top: 0px;">
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                        </ul>
-                        <ul  class="ssf" style="margin-top: 0px;">
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
-                            </li>
-                            <li class="ar-list">
-                                <img src="Images/a/a_05.png" alt="" >
-
-                                <div class="hhi">选购</div>
-                                <span>小米6</span>
+                                <img src="Images/rjcd80.jpg" alt="" >
+                                <span>8h乳胶床品</span>
                             </li>
                         </ul>
                     </div>
