@@ -1,0 +1,105 @@
+/*
+* @Author: lenovo
+* @Date:   2017-04-01 10:10:25
+* @Last Modified by:   lenovo
+* @Last Modified time: 2017-04-01 11:42:02
+*/
+/* 头部 */
+.header{
+	width: 100%;
+	height: 1.26rem;
+	position: relative;
+}
+.header img{
+	width: 100%;
+	height: 100%;
+
+}
+.fanhui{
+	width: .44rem;
+	height: .44rem;
+	position: absolute;
+	left: .27rem;
+	top: .4rem;
+}
+.fanhui img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+/* 订单号 */
+.dingdan{
+	height: 7.22rem;
+	width: 100%;
+	position: relative;
+}
+.dingdan img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.touxiangkuang{
+	width: 2.01rem;
+	height: 2.01rem;
+	border-radius: .05rem .05rem .05rem .05rem;
+	position: absolute;
+	background: #fff;
+	box-shadow: 0 0 .2rem 0 rgba(0, 0, 0, .3);
+	left: 2.46rem;
+	top: 1.08rem;
+}
+.touxiangkuang1{
+	width: 2.01rem;
+	height: 2.01rem;
+	border-radius: .05rem .05rem .05rem .05rem;
+	position: absolute;
+	background: red;
+	border: .01rem solid #fff;
+	box-shadow: 0 0 .2rem 0 rgba(0, 0, 0, .3);
+	left: 2.36rem;
+	top: .98rem;
+}
+.pan-shu{
+	width: .1rem;
+	height: 1.84rem;
+	position: absolute;
+	background: #22aa93;
+	opacity: .4;
+	top: 1.11rem;
+	right: 2.97rem;
+}
+.guangpan{
+	height: 1.7rem;
+	width: 1.7rem;
+	position: absolute;
+	border-radius: 50%;
+	border: .02rem solid #fff;
+	background: #353f47;
+	box-shadow:  0 0 .2rem 0 rgba(0, 0, 0, .3);
+	top: 1.18rem;
+	right: 2.2rem;
+}
+.lingqu{
+	height: .66rem;
+	width: 2.37rem;
+	border-radius: .5rem .5rem .5rem .5rem;
+	border: .03rem solid #FF1C7F;
+	position: absolute;
+	left: 2.56rem;
+	top: 4.85rem;
+	background: rgba(255, 255, 255, 0);
+}
+/* 底部开始 */
+.gedan1{
+	height: 4.54rem;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+
+}
+.gedan1 img{
+	height: 100%;
+	width: 100%;
+	display: block;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>画板</title>
+    <script src="jquery.js"></script>
+    <script src="jQuerycanvas.js"></script>
+    <!--<script src="canvas.js"></script>-->
+    <link rel="stylesheet" href="canvas.css">
+</head>
+<style>
+
+</style>
+<body>
+    <div class="head">
+        <div>
+            <h3>功能区</h3>
+            <div class="new">新建画布</div>
+            <div class="save">保存画布</div>
+            <div class="repeal">撤销</div>
+        </div>
+        <div>
+            <h3>绘画区</h3>
+            <div type="line" class="active">直线</div>
+            <div type="rect">矩形</div>
+            <div type="linearRect">渐变矩形</div>
+            <div type="circle">圆</div>
+            <div type="radialCircle">渐变圆</div>
+            <div type="circleRect">圆角矩形</div>
+            <div type="linearCircleRect">渐变圆角矩形</div>
+            <div type="ploy">多边形</div>
+            <div type="del">擦除</div>
+        </div>
+        <div>
+            <h3>填充和轮廓</h3>
+            <span>填充色：</span><input type="color"><br>
+            <span>轮廓色：</span><input type="color"><br>
+        </div>
+        <div>
+            <h3>渐变</h3>
+            <input type="color"><br>
+            <input type="color">
+        </div>
+        <div>
+            <h3>边框和填充</h3>
+            <div type="stroke">轮廓</div>
+            <div class="active" type="fill">填充</div>
+        </div>
+        <div>
+            <h3>其他</h3>
+            <span>线宽：</span><input type="text" value="3" class="lineWidth"><br>
+            <span>圆角矩形半径：</span><input type="text" value="30" class="radiaR"><br>
+            <span>多边形的边数：</span><input type="text" value="3" class="n"><br>
+            <span>擦除宽度：</span><input type="text" value="10" class="clear"><br>
+        </div>
+    </div>
+</body>
+</html>

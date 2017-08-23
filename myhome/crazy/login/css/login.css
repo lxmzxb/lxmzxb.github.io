@@ -1,0 +1,263 @@
+body{
+	background-image: url('../img/beijingwuzi1.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 100%;
+	height: 13.34rem;
+	float:left;
+}
+.fanhuishangji{
+	width: 0.4rem;
+	height: 0.4rem;
+	
+	margin-top: 1rem;
+	margin-left: 0.25rem;
+	background-image: url('../img/fanhuianniu_03.png');
+	background-size: 100%;
+}
+
+.biaoti{
+    width: 6.5rem;
+	height: 1.9rem;
+	overflow: hidden;
+	background: url('../img/login-biaoti1.png') no-repeat;
+	background-size:100%;
+	
+	margin: 0 auto;
+}
+.yuan1{
+	width: 2.68rem;
+	height: 2.68rem;
+	border-radius: 50%;
+	background: rgba(35, 45, 248, 0.26);
+	position: relative;
+	margin-top: 0.4rem;
+	margin-left: 2.41rem;
+}
+.yuan2{
+	width: 2.33rem;
+	height: 2.33rem;
+	border-radius: 50%;
+	background: rgba(35, 45, 248, 0.54);
+	position: absolute;
+	top: 0rem;
+	bottom: 0rem;
+	right: 0rem;
+	left: 0rem;
+	margin: auto;
+}
+.yuan3{
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	background: rgba(35, 45, 248, 0.8);
+	position: absolute;
+	top: 0rem;
+	bottom: 0rem;
+	right: 0rem;
+	left: 0rem;
+	margin: auto;
+}
+.yuan4{
+	width: 1.8rem;
+	height: 1.8rem;
+	border-radius: 50%;
+	background: url('../img/login-touxiang.png') center center no-repeat;
+	background-size: 100%;
+	position: absolute;
+	top: 0rem;
+	bottom: 0rem;
+	right: 0rem;
+	left: 0rem;
+	margin: auto;
+}
+.shurukuang{
+	width: 6.32rem;
+	height: 2.59rem;
+	border-radius: 0.2rem;
+	background: #0a186b;
+	padding: 0.6rem 0.33rem;
+	
+	margin-top: 1.15rem;
+	margin-left: .58rem;
+}
+.userkuang{
+	width: 100%;
+	height: 0.68rem;
+	border-radius: 0.2rem;
+	
+	padding: 0rem 0.1rem;
+}
+.tiao{
+	width: 101%;
+	height: 0.06rem;
+	
+	
+}
+.passwordkuang{
+	width: 100%;
+	height: 0.68rem;
+	border-radius: 0.2rem;
+	
+	padding: 0.1rem 0.1rem;
+}
+.xiaoyuan{
+	width: 0.06rem;
+	height: 0.06rem;
+	border-radius: 50%;
+	background: #3247c3;
+	float: left;
+}
+.xiaoxian{
+	width: 5.55rem;
+	height: 0.02rem;
+	background: #1a2d9c;
+	float: left;
+    margin-top: 0.02rem;
+}
+.iconkuang{
+	width: 0.6rem;
+	height: 0.6rem;
+	overflow: hidden;
+	float: left;
+	background: url('../img/user-icon.png') center center no-repeat;
+	background-size: 100%;
+}
+.iconkuang1{
+	width: 0.6rem;
+	height: 0.6rem;
+	overflow: hidden;
+	float: left;
+	background: url('../img/pass-icon.png') center center no-repeat;
+	background-size: 100%;
+}
+input{
+	border:0rem;
+	outline: 0;
+}
+.usertext{
+	height: 0.5rem;
+	float: left;
+	margin-top: 0.1rem;
+	margin-left: 0.1rem;
+	background: 0;
+}
+.passinput{
+	height: 0.5rem;
+	float: left;
+	margin-top: 0.1rem;
+	margin-left: 0.15rem;
+	background: 0;
+}
+
+.usertext::-webkit-input-placeholder{
+                color: #d5d1d1;
+                font-size: 0.28rem;
+             
+                 font-family: "微软雅黑";
+            }
+.passinput::-webkit-input-placeholder{
+                color: #d5d1d1;
+                font-size: 0.28rem;
+                font-family: "微软雅黑";
+               
+            }
+
+.zhaohui{
+	width: 6.32rem;
+	height: 0.5rem; 
+	
+	padding: 0rem 0.55rem;
+    font-family: "苹方";
+    font-size: 0.18rem;
+    font-weight: bold;
+	color: #787676;
+	margin-left: 0.59rem;
+	margin-top: 0.2rem;
+}
+.zhaohui a{
+	color: #787676;
+}
+.zhaohui-icon{
+	width: 0.3rem;
+	height: 0.3rem;
+	
+	float: left;
+	background-image: url('../img/icon_03.png');
+	background-size: 100%;
+}
+.zhaohui-zi{
+	
+	height: 0.2rem;
+	
+	float: left;
+	margin-left: 0.05rem;
+}
+
+.zhuce-icon{
+	width: 0.3rem;
+	height: 0.3rem;
+	
+	float: right;
+	background-image: url('../img/icon_05.png');
+	background-size: 100%;
+}
+.zhuce-zi{
+	
+	height: 0.2rem;
+	
+	float: right;
+	margin-left: 0.05rem;
+}
+.anniu{
+	width: 100%;
+	height:0.94rem ;
+	padding-top: 0.2rem;
+	
+}
+.yuanjiao{
+	width: 4.38rem;
+	height: 0.74rem;
+	border-radius: 0.4rem;
+	background: #fff;
+	border: 0.04rem solid #ff1c7f;
+	font-family: "苹方";
+    font-size: 0.32rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 0.72rem;
+	color: #3a3838;
+	margin: 0 auto;
+
+}
+.yuanjiao-zi{
+	font-family: "San Francisco Display";
+    font-size: 0.28rem;
+   display: inline;
+}
+.fenxiang{
+	width:100%;
+	height: 0.8rem;
+	
+	padding:0rem 2rem;
+	display: flex ;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 0.3rem;
+	
+}
+.qq{
+	width: 0.8rem;
+	height: 0.8rem;
+	
+	
+	float: left;
+}
+img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+

@@ -1,0 +1,14 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	text-transform:none;
+	text-decoration: none;
+}
+a{
+	/* color:#fff; */
+	text-decoration: none;
+}
+ul,li,ol{
+	list-style:none;
+}

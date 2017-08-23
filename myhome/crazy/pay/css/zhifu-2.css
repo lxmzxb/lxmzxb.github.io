@@ -1,0 +1,247 @@
+.toubu{
+	width: 100%;
+	height: 1.26rem;
+	position: relative;
+	background: #101b76;
+}
+.fanhui{
+	width: 0.44rem;
+	height: 0.44rem;
+	position: absolute;
+	top: 0rem;
+	bottom: 0rem;
+	left: 0.24rem;
+	margin: auto;
+}
+.fanhui img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.biaoti{
+	width: 2.01rem;
+	height: 0.31rem;
+	position: absolute;
+	top: 0rem;
+	bottom: 0rem;
+	left: 0rem;
+	right: 0rem;
+	margin: auto;
+}
+.biaoti img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.biaotizi{
+	font-size: 0.2rem;
+	color: #c7c7c7;
+	width: 1.38rem;
+	height: 0.25rem;
+	position: absolute;
+	left: 0rem;
+	right: 0rem;
+	bottom: 0.2rem;
+	margin: auto;
+}
+.toubuxia{
+	width: 100%;
+	height: 4.3rem;
+	background: #101b76;
+	position: relative;
+}
+.kuang1{
+	width: 7rem;
+	height: 5.85rem;
+	border-radius: 0.15rem;
+	position: absolute;
+	left: 0rem;
+	right: 0rem;
+	top: 0rem;
+	margin: auto;
+	clear: both;
+	background: #fff;
+	box-shadow: 0rem 0.01rem 0.2rem 0.01rem #888;
+}
+.kuang1 ul{
+	width: 100%;
+	height: 100%;
+
+}
+.kuang1 ul li{
+	width: 100%;
+	height: 50%;
+	padding: 1rem 0rem 0.61rem 0.55rem;
+}
+.kuang1-1{
+	width: 1.9rem;
+	height: 100%;
+	float: left;
+}
+.kuang1-1 img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.kuang1-2{
+	width: auto;
+	height: 100%;
+	float: left;
+}
+.kuang1-2-1{
+	width: 3.28rem;
+	height: 0.63rem;
+	font-size: 0.36rem;
+	text-align: left;
+	line-height: 0.63rem;
+	position: relative;
+}
+.kuang1zi{
+	font-size: 0.36rem;
+	text-align: left;
+	line-height: 0.63rem;
+}
+.kuang1tu{
+	width: 0.74rem;
+	height: 0.36rem;
+	border-radius: 0.37rem;
+	background: #ff1c7f;
+	font-size: 0.24rem;
+	text-align: center;
+	line-height: 0.36rem;
+	color: #fff;
+	position: absolute;
+	top: 0rem;
+	bottom: 0rem;
+	right: 0rem;
+	margin: auto;
+}
+.kuang1-2-2{
+	width: auto;
+	height: auto;
+	font-size: 0.22rem;
+	text-align: left;
+	line-height: 0.28rem;
+	color: #9e9e9e;
+}
+.kuang1 .li1{
+	width: 100%;
+	height: 50%;
+	padding: 1rem 0rem 0.61rem 0.55rem;
+	border-bottom: 0.02rem dashed #888;	
+}
+.neirong{
+	width: 100%;
+	height: 4.95rem;
+	margin-top: 2.1rem;
+}
+.neirong1{
+	width: 7rem;
+	height: 100%;
+	margin: 0 auto;
+
+}
+.kuang2{
+	width: 100%;
+	height: 0.48rem;
+
+}
+.kuang2-1{
+	width: 0.54rem;
+	height: 100%;
+	float: left;
+}
+.kuang2-1 img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.kuang2-2{
+	width: auto;
+	height: 100%;
+	float: left;
+}
+.kuang2-2-1{
+	width: auto;
+	height: 0.28rem;
+	font-size: 0.25rem;
+	text-align: left;
+	line-height: 0.28rem;
+}
+.kuang2-2-2{
+	width: auto;
+	height: 0.2rem;
+	font-size: 0.18rem;
+	color: #9e9e9e;
+	text-align: left;
+	line-height: 0.2rem;	
+}
+.kuang3{
+	width: 100%;
+	height: 1.08rem;
+	margin-top: 0.69rem;
+}
+.kuang3-1{
+	width: 3.31rem;
+	height: 1.08rem;
+	float: left;
+}
+.kuang3-1 img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.kuang3-2{
+	width: 3.31rem;
+	height: 1.08rem;
+	float: left;
+	margin-left: 0.38rem;
+}
+.kuang3-2 img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.dibu{
+	width: 100%;
+	height: 1.2rem;
+	background: #101b76;
+	position: fixed;
+	bottom: 0rem;
+}
+.dibu1{
+	width: 2.4rem;
+	height: 100%;
+	padding-top:0.37rem ;
+	margin: 0 auto;
+}
+.dibu1-1{
+	width: 0.75rem;
+	height: 0.57rem;
+	float: left;
+}
+.dibu1-1 img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.dibu1-2{
+	width: auto;
+	height: 0.57rem;
+	margin-left: 0.04rem;
+	float: left;
+}
+.dibu1-2-1{
+	width: auto;
+	height: 0.31rem;
+	font-size: 0.3rem;
+	color: #fff;
+	line-height: 0.31rem;
+}
+.dibu1-2-2{
+	width: auto;
+	height: 0.26rem;
+	font-size: 0.24rem;
+	color: #8082a7;
+	line-height: 0.26rem;
+}

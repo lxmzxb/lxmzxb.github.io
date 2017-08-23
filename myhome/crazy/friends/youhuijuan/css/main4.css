@@ -1,0 +1,131 @@
+/*
+* @Author: lenovo
+* @Date:   2017-03-31 17:50:55
+* @Last Modified by:   lenovo
+* @Last Modified time: 2017-04-01 08:57:14
+*/
+/* 头部 */
+.header{
+	width: 100%;
+	height: 1.26rem;
+}
+.header img{
+	width: 100%;
+	height: 100%;
+
+}
+.fanhui{
+	width: .44rem;
+	height: .44rem;
+	position: absolute;
+	left: .27rem;
+	top: .4rem;
+}
+.fanhui img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+/* title部分 */
+.title{
+	height: 1.54rem;
+	width: 100%;
+	background: #F9F9F9;
+	padding-bottom: .38rem;
+	padding-top: .38rem;
+}
+.title-sousuo{
+	width: 3.74rem;
+	height: .78rem;
+	margin: 0 auto;
+	border-radius: .5rem .5rem .5rem .5rem;
+	border: .02rem solid #E92689;
+	padding: .07rem .09rem;
+	position: relative;
+}
+.title-left{
+	width: 1.89rem;
+	height: .65rem;
+	position: absolute;
+	border-radius: .5rem .5rem .5rem .5rem;
+	left: 0.09rem;
+	top: 0.05rem;
+	background: #f9f9f9;
+}
+.title-right{
+	width: 2.2rem;
+	height: .65rem;
+	background: #25315D;
+	position: absolute;
+	border-radius: .5rem .5rem .5rem .5rem;
+	right: 0.09rem;
+	top: 0.05rem;
+}
+.title-left-top{
+	width: 100%;
+	height: .23rem;
+	margin-top: .13rem;
+	font-size: .23rem;
+	line-height: .23rem;
+	text-align: center;
+	color: #717274;
+}
+.title-left-bottom{
+	width: 100%;
+	height: .12rem;
+	margin-top: .05rem;
+	font-size: .12rem;
+	line-height: .12rem;
+	text-align: center;
+	color: #CACBCD;
+}
+.title-right-top{
+	width: 100%;
+	height: .23rem;
+	margin-top: .13rem;
+	font-size: .23rem;
+	line-height: .23rem;
+	text-align: center;
+	color: #fff;
+}
+.title-right-bottom{
+	width: 100%;
+	height: .12rem;
+	margin-top: .05rem;
+	font-size: .12rem;
+	line-height: .12rem;
+	text-align: center;
+	color: #CACBCD;
+}
+/* 优惠券 */
+.dabeijin{
+	width: 100%;
+	height: 10.58rem;
+	background: #F9F9F9;
+}
+.youhuiquan{
+	width: 100%;
+	height: 3.5rem;
+	padding-top: .37rem;
+	padding-bottom: .2rem;
+	padding-right: .4rem;
+	padding-left: .4rem;
+}
+.youhuiquan img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.youhuiquan1{
+	width: 100%;
+	height: 3.5rem;
+	padding-top: .2rem;
+	padding-bottom: .2rem;
+	padding-right: .4rem;
+	padding-left: .4rem;
+}
+.youhuiquan1 img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}

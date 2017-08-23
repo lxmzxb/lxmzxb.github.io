@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.head{
+    width: 1220px;
+    height: 150px;
+    margin: 10px auto;
+    background: rgba(255,0,0,0.6);
+    display: flex;
+    justify-content: space-between;
+}
+.head > div{
+    float: left;
+}
+.head > div >div{
+    cursor: pointer;
+}
+.head > div:first-child{
+    padding-top: 6px;
+    box-sizing: border-box;
+    width: 10%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    text-align: center;
+    line-height: 27px;
+}
+.head > div:first-child >div{
+    width: 90px;
+    background: #fff;
+    border: 1px solid red;
+    border-radius: 6px;
+    margin-left: 14px;
+    margin-top: 6px;
+}
+
+.head > div:nth-child(2){
+    padding-top: 6px;
+    box-sizing: border-box;
+    width: 33%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    text-align: center;
+    line-height: 27px;
+}
+.head > div:nth-child(2) >div{
+    width: 98px;
+    background: #fff;
+    border: 1px solid red;
+    border-radius: 6px;
+    margin-left: 25px;
+    margin-top: 6px;
+    float: left;
+    font-size: 16px;
+}
+.head > div:nth-child(3){
+    padding-top: 6px;
+    box-sizing: border-box;
+    width: 15%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    text-align: center;
+    line-height: 38px;
+}
+.head > div:nth-child(4){
+    padding-top: 6px;
+    box-sizing: border-box;
+    width: 9%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    text-align: center;
+    line-height: 38px;
+}
+.head > div:nth-child(5){
+    padding-top: 6px;
+    box-sizing: border-box;
+    width: 10%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    text-align: center;
+    line-height: 32px;
+}
+.head > div:nth-child(5) > div{
+    width: 98px;
+    background: #fff;
+    border: 1px solid red;
+    border-radius: 6px;
+    margin-left: 13px;
+    margin-top: 6px;
+    float: left;
+    font-size: 16px;
+}
+.head > div:nth-child(6){
+    padding-top: 6px;
+    box-sizing: border-box;
+    width: 20%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    /*text-align: center;*/
+    line-height: 26px;
+}
+.head > div:nth-child(6) > h3{
+    margin-left: 97px;
+}
+.head > div:nth-child(6) > span{
+    margin-left: 20px;
+}
+.head > div:nth-child(6) > input{
+    width: 38px;
+}
+.head > div > .active{
+    color: orangered;
+}

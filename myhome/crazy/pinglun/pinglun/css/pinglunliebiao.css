@@ -1,0 +1,260 @@
+.beijing{
+	width: 100%;
+	overflow: hidden;
+	background: #101A77;
+}
+.ding{
+	height: 0.45rem;
+	width: 100%
+}
+.geming{
+    height: 0.76rem;
+    margin-right: 0.24rem;
+    margin-left: 0.24rem;
+    position: relative;
+}
+.geming-shang{
+	width: 100%;
+	height: 0.4rem;
+}
+.gm-zuo{
+	width: 0.44rem;
+	height: 0.44rem;
+	border-radius: 50%;
+	color: #fff;
+	font-size: 0.16rem;
+	text-align: center;
+	line-height: 0.44rem;
+    border: 0.01px solid #09115d;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    float: left;
+}
+.gm{
+	font-size: 0.4rem;
+	width: 52%;
+	height: 0.76rem;
+	line-height: 0.76rem;
+	margin:0 auto;
+	color: #fff;
+}
+.gm-xia{
+	height: 0.47rem;
+    width: 100%;
+    font-size: 0.26rem;
+    text-align: center;
+    color: #fff;
+    font-family: "San Francisco Display";
+}
+.anniu-di{
+	width: 3.7rem;
+	height: 0.8rem;
+	margin: 0 auto;
+}
+.anniu{
+	width: 1.05rem;
+	height: 0.46rem;
+	border: 1px solid #9a1a75;
+	border-radius: 0.23rem;
+	float: left;
+	margin-right: 0.16rem;
+	position: relative;
+}
+.yuan1{
+	width: 0.07rem;
+	height: 0.07rem;
+	background: #fff;
+	border: 0.03rem solid #00ffff;
+	border-radius: 50%;
+	position: absolute;
+	margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0.13rem;
+}
+.hq{
+	color: #fff;
+	font-size: 0.28rem;
+	height: 0.46rem;
+	float: right;
+	margin-right: 0.36rem;
+	line-height: 0.46rem
+}
+.rb{
+	color: #fff;
+	font-size: 0.28rem;
+	height: 0.46rem;
+	float: right;
+	margin-right: 0.23rem;
+	line-height: 0.46rem
+}
+.qbpl{
+	width: 4.81rem;
+	height: 1.22rem;
+	border-radius: 0.61rem;
+	background: #f6f6f6;
+	margin: 0 auto;
+}
+.tx{
+	width: 0.97rem;
+	height: 0.91rem;
+	margin-left: 0.25rem;
+	margin-top: 0.15rem;
+	float: left;
+}
+.tx img{
+	width: 100%;
+	height: 100%
+}
+.zi{
+	height:0.68rem;
+    width: 2.42rem;
+    margin-top: 0.27rem;
+    float: left;
+    margin-left: 0.2rem;
+}
+.zi-qbpl{
+	font-size: 0.26rem;
+	height: 0.26rem;
+	width: 1.42rem;
+	color: #0167e4;
+	float: left;
+}
+.zi-xhm{
+	width: 0.2rem;
+	height: 0.2rem;
+	float: left;
+	background-image: url('../img/tinggeliucheng_06.png');
+	background-size: 100% 100%
+}
+.zi-xhm img{
+    width: 100%;
+    height: 100%
+}
+.zi-xx{
+	width: 100%;
+	height: 0;
+	border-bottom: 0.02rem dashed;
+	float: left;
+	margin-top: 0.05rem;
+	margin-bottom: 0.05rem;
+}
+.zi-yw{
+	font-size: 0.22rem;
+	color: #ccc;
+	width: 100%;
+	float: left;
+}
+.qbpl-shu{
+	height: 100%;
+	font-size: 0.36rem;
+	line-height: 1.22rem;
+	color: #ff1c7f;
+	float: left;
+	margin-left: 0.11rem
+}
+.pl{
+	width: 100%;
+	overflow: hidden;
+	margin-top: 0.6rem;
+}
+.pl li{
+	height: 1.23rem;
+	width: 6rem;
+	margin-left: 0.88rem;
+}
+.pl-tu1{
+	width: 1.05rem;
+	height: 1.05rem;
+	float: left;
+	background-size: 100% 100%;
+	background-image: url('../img/1.png')
+
+}
+.pl-zi1{
+	width: 2.43rem;
+	height: 0.36rem;
+	margin-left: 0.24rem;
+	font-size: 0.26rem;
+	line-height: 0.36rem;
+	color: #ff1c7f;
+	float: left;
+}
+.pl-xin{
+	width: 0.26rem;
+	height: 0.26rem;
+	margin-top:0.02rem;
+	margin-right: 0.02rem;
+	float: left;
+	background-size: 100% 100%;
+	background-image: url('../img/7.png')
+}
+.pl-xuxian{
+	height: 0;
+	width: 2.83rem;
+	border-top: 0.01rem  dashed #9491a7;
+	float: left;
+	margin-left: 0.24rem;
+}
+.pl-zi2{
+	margin-left: 0.24rem;
+    height: 0.46rem;
+    font-size: 0.24rem;
+    float: left;
+    line-height: 0.46rem;
+    color: #fff;
+    font-family: "苹方";
+}
+.pl-zi3{
+	margin-left: 0.24rem;
+	height: 0.18rem;
+	font-size: 0.18rem;
+	color:#9491a7;
+	float: left
+}
+.pl-tu2{
+	width: 1.05rem;
+	height: 1.05rem;
+	float: left;
+	background-size: 100% 100%;
+	background-image: url('../img/2.png')
+
+}
+.pl-tu3{
+	width: 1.05rem;
+	height: 1.05rem;
+	float: left;
+	background-size: 100% 100%;
+	background-image: url('../img/3.png')
+
+}
+.pl-tu4{
+	width: 1.05rem;
+	height: 1.05rem;
+	float: left;
+	background-size: 100% 100%;
+	background-image: url('../img/4.png')
+
+}
+.pl-tu5{
+	width: 1.05rem;
+	height: 1.05rem;
+	float: left;
+	background-size: 100% 100%;
+	background-image: url('../img/5.png')
+
+}
+.pl-tu6{
+	width: 1.05rem;
+	height: 1.05rem;
+	float: left;
+	background-size: 100% 100%;
+	background-image: url('../img/6.png')
+
+}
+.di{
+	width: 100%;
+	height: 1.3rem
+}

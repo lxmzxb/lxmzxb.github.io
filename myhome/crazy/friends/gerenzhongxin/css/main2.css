@@ -1,0 +1,313 @@
+/*
+* @Author: lenovo
+* @Date:   2017-03-31 11:23:31
+* @Last Modified by:   lenovo
+* @Last Modified time: 2017-03-31 15:19:05
+*/
+/* 头部开始 */
+header{
+	width: 100%;
+	height: 1.26rem;
+	background: #101A76;
+}
+.header-title{
+	width: 100%;
+	height: 1.26rem;
+	position: relative;
+}
+.header-fanhuijian{
+	width: .44rem;
+	height: .44rem;
+	position: absolute;
+	left: .27rem;
+	top: 0rem;
+	bottom: 0rem;
+	margin: auto;
+}
+.header-tu1{
+	display: block;
+	float: left;
+}
+.header-fanhuijian img{
+	width: 100%;
+	height: 100%;
+}
+.header-zi{
+	height: 1.26rem;
+	width: 1.88rem;
+	position: relative;
+	margin: 0 auto;
+}
+.haoyou-zi{
+	float: left;
+	color: #fff;
+}
+.haoyou-zi1{
+	margin-top: .33rem;
+	margin-left: .33rem;
+	font-weight: 100;
+	font-size: .3rem;
+}
+.haoyou-zi2{
+	white-space: nowrap;
+	text-align: center;
+	font-weight: 100;
+	font-size: .15rem;
+}
+.haoyou-zi-yuandian1{
+	height: .06rem;
+	width: .06rem;
+	border-radius: 50%;
+	background: #FF1C7F;
+	position: absolute;
+	top: .49rem;
+	left: 0;
+}
+.haoyou-zi-yuandian2{
+	height: .06rem;
+	width: .06rem;
+	border-radius: 50%;
+	background: #FF1C7F;
+	position: absolute;
+	top: .49rem;
+	left: .09rem;
+}
+
+.haoyou-zi-yuandian3{
+	height: .06rem;
+	width: .06rem;
+	border-radius: 50%;
+	background: #FF1C7F;
+	position: absolute;
+	top: .49rem;
+	right: .09rem;
+}
+
+.haoyou-zi-yuandian4{
+	height: .06rem;
+	width: .06rem;
+	border-radius: 50%;
+	background: #FF1C7F;
+	position: absolute;
+	top: .49rem;
+	right: 0;
+}
+.header-jia{
+	height: .33rem;
+	width: .31rem;
+	position: absolute;
+	top: .0rem;
+	bottom: 0;
+	margin: auto;
+	right:.32rem;
+
+}
+.header-jia img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.dabeijin{
+	width: 100%;
+	overflow: hidden;
+	background: #F9F9F9;
+}
+/* banner版块 */
+.banner{
+	width: 100%;
+	height: 4.6rem;
+	position: relative;
+	background: url('../img/haoyou_02.png') center center no-repeat;
+	background-size: 100%;
+}
+.banner-touxiang{
+	height: 1.5rem;
+	width: 1.5rem;
+	border-radius: 50%;
+	background: red;
+	position: absolute;
+	left: 2.83rem;
+	bottom: .38rem;
+	border: .02rem solid #fff;
+}
+/* banner下板块 */
+.banner-bottom{
+	width: 100%;
+	height: .32rem;
+	background: #F9F9F9;
+}
+.banner-bottom span{
+	display: block;
+	font-size: .24rem;
+	line-height: .32rem;
+	text-align: center;
+	color: #646262;
+}
+/* 小横杆 五角星 */
+.henggan{
+	height: .18rem;
+	width: 100%;
+	position: relative;
+	background: #F9F9F9;
+}
+.heng{
+	width: .38rem;
+	height: .02rem;
+	position: absolute;
+	top: .1rem;
+	left: 3.48rem;
+	background: #D2D2D2;
+}
+.shugan1{
+	width: .02rem;
+	height: .03rem;
+	position: absolute;
+	background: #505050;
+	top:.09rem;
+	left: 3.49rem;
+}
+.shugan2{
+	width: .02rem;
+	height: .03rem;
+	position: absolute;
+	background: #505050;
+	top:.09rem;
+	right: 3.64rem;
+}
+.henggan-bottom{
+	width: 100%;
+	height:.32rem;
+	position: relative;
+	background: #F9F9F9;
+}
+.henggan-bottom-wujiaoxing{
+	width: 1.52rem;
+	height: .32rem;
+	position: absolute;
+	left:2.92rem;
+	top: 0;
+}
+.henggan-bottom-wujiaoxing img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+/* 动态版块 */
+.dongtai{
+	height:auto;
+	width: 100%;
+	padding-top: .26rem;
+	background: #F9F9F9;
+	position: relative;
+}
+.dongtai-shugan{
+	height: 9.07rem;
+	width: 0.01rem;
+	background: #A1B2B4;
+	position: absolute;
+	top: 1rem;
+	left: 1.66rem;
+}
+.dongtai-yuandian1{
+	height: .15rem;
+	width: .15rem;
+	border-radius: 50%;
+	background: #FF083D;
+	border: .02rem solid #D1D2D7;
+	position: absolute;
+	top: 1rem;
+	left:1.59rem ;
+}
+.dongtai-yuandian2{
+	height: .15rem;
+	width: .15rem;
+	border-radius: 50%;
+	background: #FF083D;
+	border: .02rem solid #D1D2D7;
+	position: absolute;
+	top: 6.13rem;
+	left:1.59rem ;
+}
+.dongtai1{
+	height: 5.08rem;
+	width: 100%;
+	position: relative;
+}
+.dongtai1-left{
+	height: 1.05rem;
+	width: 1.05rem;
+	position: absolute;
+	left: .24rem;
+	top: .33rem;
+	background: cyan;
+	border: .02rem solid #fff;
+	background: url('../img/5447df985f54af65!400x400_big.jpg') no-repeat center center;
+	background-size: 100%;
+	border-radius: 50%;
+	box-shadow: 0px 0px .2rem .001rem rgba(0, 0, 0, 0.3);
+}
+
+.dongtai1-right{
+	height: 4.83rem;
+	width: 4.9rem;
+	border-bottom: .01rem solid #C7D1D2;
+	position: absolute;
+	right:.24rem ;
+	top: 0;
+}
+.dongtai1-right-top{
+	width: 100%;
+	height: .87rem;
+	background: url('../img/haoyou_51.png') center center no-repeat;
+	background-size: 100%;
+}
+.dongtai1-right-zhong1{
+	height: 2.83rem;
+	width: 100%;
+	margin-top: .16rem;
+	margin-bottom: .16rem;
+	border: .02rem solid #fff;
+	background: url('../img/62-121214133336.jpg') center center no-repeat;
+	background-size: 100%;
+	box-shadow:  0px 0px .2rem .001rem rgba(0, 0, 0, 0.3);
+	position: relative;
+}
+.dongtai1-right-zhong2{
+	height: 2.83rem;
+	width: 100%;
+	margin-top: .16rem;
+	margin-bottom: .16rem;
+	border: .02rem solid #fff;
+	background: url('../img/139-150R1091416.jpg') center center no-repeat;
+	background-size: 100%;
+	box-shadow:  0px 0px .2rem .001rem rgba(0, 0, 0, 0.3);
+	position: relative;
+}
+.bofang{
+	height: .71rem;
+	width: .71rem;
+	position: absolute;
+	top: 1.1rem;
+	left: 2.17rem;
+}
+.bofang img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.dongtai1-right-bottom{
+	width: 100%;
+	height: .82rem;
+	background: url('../img/haoyou_80.png') center center no-repeat;
+	background-size: 100%;
+}
+/* 底部动态框 */
+.dibu{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 1.01rem;
+	width: 100%;
+	background: url('../img/haoyou_89.png') center center no-repeat;
+	background-size: 100%;
+}

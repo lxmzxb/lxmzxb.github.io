@@ -1,0 +1,269 @@
+/*
+* @Author: lenovo
+* @Date:   2017-03-31 15:43:04
+* @Last Modified by:   lenovo
+* @Last Modified time: 2017-03-31 17:49:12
+*/
+/* 头部 */
+.header{
+	width: 100%;
+	height: 1.26rem;
+}
+.header img{
+	width: 100%;
+	height: 100%;
+
+}
+.fanhui{
+	width: .44rem;
+	height: .44rem;
+	position: absolute;
+	left: .27rem;
+	top: .4rem;
+}
+.fanhui img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+/* 列表 */
+.liebiao{
+	width: 100%;
+	height: 11.74rem;
+	/* overflow: hidden; */
+	background: #F9F9F9;
+	padding-top: .11rem;
+}
+.liebiao ul{
+	width: 100%;
+	padding-right:.15rem;
+	padding-left: .13rem;
+	overflow: hidden; 
+}
+.liebiao ul li{
+	width: 7.22rem;
+	height: 1rem;
+	margin-top:.16rem;
+	background: #fff;
+	border-radius: .2rem .2rem .2rem .2rem;
+	box-shadow: 0rem 0rem .2rem .0rem rgba(0, 0, 0, .1); 
+	position: relative;
+}
+.liebiao .zuihou{
+	margin-bottom:.16rem;
+}
+/* .liebiao1{
+	position: relative;
+}
+.liebiao2{
+	position: relative;
+}
+.liebiao1{
+	position: relative;
+}
+.liebiao2{
+	position: relative;
+}
+.liebiao1{
+	position: relative;
+}
+.liebiao2{
+	position: relative;
+} */
+.liebiao-tupiao{
+	width: .4rem;
+	height: .4rem;
+	position: absolute;
+	left: .21rem;
+	top: .3rem;
+	background: url('../img/好友_29.png') center center no-repeat;
+	background-size: 100%;
+	border-radius: 50%;
+	box-shadow:  0rem 0rem .2rem .0rem rgba(0, 0, 0, .3); 
+}
+.liebiao-zhong{
+	width: 4.08rem;
+	height: 100%;
+	margin-left: .81rem
+}
+.liebiao-zhong-top{
+	height: .35rem;
+	width: 100%;
+	margin-top: .14rem;
+	padding-top: .05rem;
+	padding-bottom: .05rem;
+	float: left;
+}
+.liebiao-zhong-top span{
+	font-size: .25rem;
+	line-height: .25rem;
+	text-align: left;
+	font-weight: 600;
+	display: block;
+	color: #666666;
+}
+.liebiao-shenglie{
+	width: 100%;
+	height: .03rem;
+	font-size: .03rem;
+	line-height: .03rem;
+	text-align: left;
+	color: #9E9E9E;
+	letter-spacing: .03rem;
+}
+.liebiao-shenglie span{
+	color: #666666;
+}
+.liebiao-zhong-bottom{
+	height: .32rem;
+	width: 100%;
+	margin-top: .03rem;
+	padding-top: .05rem;
+	padding-bottom: .05rem;
+	float: left;
+}
+.liebiao-zhong-bottom span{
+	font-size: .22rem;
+	line-height: .22rem;
+	text-align: left;
+	font-weight: 300;
+	display: block;
+	color: #9E9E9E;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.liebiao-right{
+	height: .34rem;
+	width: .34rem;
+	position: absolute;
+	right: .22rem;
+	top: .36rem;
+	background: url('../img/haoyou_32.png') center center no-repeat;
+	background-size: 100%;
+}
+.liebiao-tupiao1{
+	width: .4rem;
+	height: .4rem;
+	position: absolute;
+	left: .21rem;
+	top: .3rem;
+	background: url('../img/haoyou_43.png') center center no-repeat;
+	background-size: 100%;
+	border-radius: 50%;
+	box-shadow:  0rem 0rem .2rem .0rem rgba(0, 0, 0, .3); 
+}
+.liebiao-tupiao2{
+	width: .4rem;
+	height: .4rem;
+	position: absolute;
+	left: .21rem;
+	top: .3rem;
+	background: url('../img/haoyou_46.png') center center no-repeat;
+	background-size: 100%;
+	border-radius: 50%;
+	box-shadow:  0rem 0rem .2rem .0rem rgba(0, 0, 0, .3); 
+}
+.liebiao-tupiao3{
+	width: .4rem;
+	height: .4rem;
+	position: absolute;
+	left: .21rem;
+	top: .3rem;
+	background: url('../img/haoyou_48.png') center center no-repeat;
+	background-size: 100%;
+	border-radius: 50%;
+	box-shadow:  0rem 0rem .2rem .0rem rgba(0, 0, 0, .3); 
+}
+.liebiao-tupiao4{
+	width: .4rem;
+	height: .4rem;
+	position: absolute;
+	left: .21rem;
+	top: .3rem;
+	background: url('../img/haoyou_51.png') center center no-repeat;
+	background-size: 100%;
+	border-radius: 50%;
+	box-shadow:  0rem 0rem .2rem .0rem rgba(0, 0, 0, .3); 
+}
+.liebiao-tupiao5{
+	width: .4rem;
+	height: .4rem;
+	position: absolute;
+	left: .21rem;
+	top: .3rem;
+	background: url('../img/haoyou_53.png') center center no-repeat;
+	background-size: 100%;
+	border-radius: 50%;
+	box-shadow:  0rem 0rem .2rem .0rem rgba(0, 0, 0, .3); 
+}
+.liebiao-enniu1{
+	width: .96rem;
+	height: .48rem;
+	position: absolute;
+	top: .27rem;
+	right: .22rem;
+}
+.mui-switch {
+	  width: .96rem;
+	  height: .48rem;
+	  position: relative;
+	  border: .01rem solid #1BA64F;
+	  background-color: #1BA64F;
+	  box-shadow: #dfdfdf 0 0 0 0 inset;
+	  border-radius: .2rem;
+	  border-top-left-radius: .2rem;
+	  border-top-right-radius: .2rem;
+	  border-bottom-left-radius: .2rem;
+	  border-bottom-right-radius: .2rem;
+	  background-clip: content-box;
+	  display: inline-block;
+	  -webkit-appearance: none;
+	  user-select: none;
+	  outline: none;
+	  display: block;
+}
+.mui-switch:before {
+	    content: '';
+	    width: .52rem;
+	    height: .4rem;
+	    position: absolute;
+	    top: .03rem;
+	    left: .07rem;
+	    border-radius: .20rem;
+	    border-top-left-radius: .20rem;
+	    border-top-right-radius: .20rem;
+	    border-bottom-left-radius: .20rem;
+	    border-bottom-right-radius: .20rem;
+	    background-color: #fff;
+	    box-shadow: 0 .01rem .03rem rgba(0, 0, 0, 0.4); 
+/* 	    position: relative; */
+}
+.mui-switch:checked {
+	    border-color: #3F4853;
+	    box-shadow: #3F4853 0 0 0 .16rem inset;
+	    background-color: #3F4853; 
+}
+.mui-switch:checked:before {
+      left: .31rem; 
+}
+.enniu-yuan{
+	height: .15rem;
+	width: .15rem;
+	border-radius: 50%;
+	border: .01rem solid #666666;
+	position: absolute;
+	background: #F3F3F3;
+	left: .18rem;
+	top: .13rem;
+}
+/* 底部 */
+.shanchu{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 1rem;
+	width: 100%;
+	background: url('../img/haoyou_55.png') center center no-repeat;
+	background-size: 100%;
+}

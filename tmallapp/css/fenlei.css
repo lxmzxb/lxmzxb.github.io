@@ -1,0 +1,123 @@
+
+.cover{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.7;
+	z-index: 999;
+}
+.cover p{
+	width: 0.3rem;
+	position: absolute;
+	right: 0.3rem;
+	top: 50%;
+	line-height: 0.28rem;
+	font-size: 0.28rem;
+	color: #b5b5b5;
+}
+.feilei-body{
+	width: 6.5rem;
+	height: 100%;
+	background: #fff;
+	position: fixed;
+	left: 0;
+	top: 0;
+	opacity: 1;
+	z-index: 9999;
+}
+.feilei-header{
+	width: 100%;
+	height: 0.88rem;
+	background: #EEEEEE;
+	border-bottom: 0.02rem solid #e1e1e1;
+}
+.feilei-body h1{
+	font-weight: 400;
+	float: left;
+	width: 23%;
+	text-align: center;
+	line-height: 0.88rem;
+	color: #333;
+	font-size: 0.28rem;
+}
+.feilei-content{
+	width: 100%;
+	height: 12.92rem;
+	background: red;
+	position: relative;
+}
+.feilei-left{
+	width: 23%;
+	height: 100%;
+	background: yellow;
+}
+.feilei-nav{
+	width: 100%;
+	height: 100%;
+	color: #9b9b9b;
+	font-size: 0.28rem;
+	text-align: center;
+	background: #eee;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.feilei-nav ul li{
+	line-height: 1.2rem;
+	border-bottom: 0.02rem solid #e1e1e1;
+}
+.feilei-right{
+	width: 77%;
+	height: 100%;
+	background: #fff;
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: auto;
+	padding: 0.2rem 3%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.tab-list{
+	width: 100%;
+	overflow: hidden;
+}
+ .list-title{
+ 	text-align: left;
+
+ }
+ .tab-list h2{
+ 	font-size: 0.28rem;
+ 	line-height: 0.28rem;
+ 	color: #9b9b9b;
+ 	padding: 0.3rem 0;
+ }
+ .tab-list ul{
+ 	overflow: hidden;
+ }
+ .tab-list ul li{
+ 	float: left;
+ 	width: 33.333333%;
+ 	margin: 0.1rem 0;
+ }
+ .tab-img{
+ 	width: 1.1662rem;
+ 	height: 1.1662rem;
+ 	margin: 0 auto;
+ }
+ .tab-img img{
+ 	width: 100%;
+ 	height: 100%;
+ }
+ .tab-desc{
+ 	line-height: 0.46rem;
+ 	height: 0.46rem;
+ 	padding: 0.08rem 0;
+ 	font-size: 0.28rem;
+ 	color: #5d5d5d;
+ 	text-align: center;
+ 	overflow: hidden;
+ 	text-overflow: ellipsis;
+ }

@@ -1,0 +1,179 @@
+body{
+	background: #f6f6f6;
+}
+.toubu{
+	width: 100%;
+	height: 3.1rem;
+	position: relative;
+	background: #101b76;
+}
+.fanhui{
+	width: 0.44rem;
+	height: 0.44rem;
+	position: absolute;
+	top: 0.37rem;
+	left: 0.24rem;
+	margin: auto;
+}
+.fanhui img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.biaoti{
+	width: 2.01rem;
+	height: 0.31rem;
+	position: absolute;
+	top: 0.45rem;
+	left: 0rem;
+	right: 0rem;
+	margin: auto;
+	font-size: 0.3rem;
+	color: #fff;
+	text-align: center;
+	line-height: 0.31rem;
+	letter-spacing: 0.1rem;
+}
+.biaotizi{
+	font-size: 0.2rem;
+	color: #c7c7c7;
+	width: 2.2rem;
+	height: 0.25rem;
+	position: absolute;
+	left: 0rem;
+	right: 0rem;
+	bottom: 2.0rem;
+	margin: auto;
+}
+.toubuxia{
+	width: 5.6rem;
+	height: 3.3rem;
+	margin-left: 0.94rem;
+	margin-top: -1.5rem;
+	position: relative;
+	
+}
+.toubuxia img{
+	width: 100%;
+	height: 100%;
+	display: block;
+	z-index: 999;
+}
+.toubuxia1{
+	width: 100%;
+	height: 0.98rem;
+	border-bottom: 0.03rem solid #d6d6d6;
+}
+.toubuxia1-1{
+	width: 3.5rem;
+	height: 0.65rem;
+	margin-top: 0.23rem;
+	margin-left: 0.94rem;
+}
+.toubuxia1-1 img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.neirong{
+	width: 5.6rem;
+	height: 7.1rem;
+	margin: 0 auto;
+}
+.neirong ul{
+	width: 100%;
+	height: 3.9rem;
+}
+.neirong ul li{
+	width: 100%;
+	height: 0.94rem;
+	padding-top: 0.42rem;
+}
+.neirong1{
+	width: 0.5rem;
+	height: 100%;
+	float: left;
+}
+.neirong1 img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.neirong2{
+	width: 5.02rem;
+	height: 100%;
+	margin-left: 0.04rem;
+	float: left;
+
+}
+.neirong3{
+	font-size: 0.20rem;
+	color: #dcdcdc;
+	text-align: left;
+	line-height: 0.5rem;
+}
+.danxuan{
+	width: 2.8rem;
+	height: 0.54rem;
+	margin-left: 0.6rem;
+	padding-top: 0.3rem;
+}
+.danxuan1{
+	width: 0.28rem;
+	height: 0.24rem;
+	padding-right: 0.04rem;
+	float: left;
+}
+.danxuanzi{
+	font-size: 0.2rem;
+	color: #000;
+	line-height: 0.24rem;
+	text-align: left;
+	float: left;
+}
+.danxuanzi span{
+	color: #9e9e9e;
+}
+.dibu{
+	width: 100%;
+	height: 1.2rem;
+	background: #101b76;
+	position: fixed;
+	bottom: 0rem;
+}
+.dibu1{
+	width: 3.4rem;
+	height: 100%;
+	padding-top:0.37rem ;
+	margin: 0 auto;
+}
+.dibu1-1{
+	width: 0.75rem;
+	height: 0.57rem;
+	float: left;
+}
+.dibu1-1 img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.dibu1-2{
+	width: auto;
+	height: 0.57rem;
+	margin-left: 0.04rem;
+	float: left;
+}
+.dibu1-2-1{
+	width: auto;
+	height: 0.31rem;
+	font-size: 0.3rem;
+	color: #fff;
+	line-height: 0.31rem;
+}
+.dibu1-2-2{
+	width: auto;
+	height: 0.26rem;
+	font-size: 0.24rem;
+	color: #8082a7;
+	line-height: 0.26rem;
+}

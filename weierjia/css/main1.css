@@ -1,0 +1,393 @@
+/*
+* @Author: lenovo
+* @Date:   2017-04-15 14:19:07
+* @Last Modified by:   lenovo
+* @Last Modified time: 2017-04-17 10:24:01
+*/
+header{
+	width: 100%;
+	height: 154px;
+	background: url('../img/wek.jpg') no-repeat center center;
+	
+}
+header .top{
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+}
+header .top .top-left{
+	float: left;
+	width: 656px;
+	height: 79px;
+	margin-top: 40px;
+	margin-left: 15px;
+}
+header .top-right{
+	width: 257px;
+	height: 52px;
+	float: right;
+	background: url('../img/tel.png') no-repeat left top;
+	margin-top: 54px;
+	padding-left: 68px;
+
+}
+header .p1{
+	font-family: "微软雅黑";
+	font-size: 16px;
+	color: #fff;
+	font-weight: 800;
+}
+header .p2{
+	font-size: 18px;
+	font-family: "微软雅黑";
+	color: #fff;
+}
+.t1{
+	width: 100%;
+	height: 2px;
+	background: url('../img/t1.jpg') no-repeat center center;
+}
+nav{
+	width: 100%;
+	height: 70px;
+	background: url('../img/nav.jpg');
+}
+nav .nav{
+	width: 1200px;
+	height: 70px;
+	background: url('../img/nav1.jpg') no-repeat center center;
+	margin: 0 auto;
+}
+nav ul li{
+	float: left;
+	width: 134px;
+	height: 100%;
+	margin-left: 10px;
+	line-height: 70px;
+	text-align: center;
+}
+nav ul li.zhuye{
+	width: 86px;
+	height: 70px;
+	margin-left: 0;
+}
+nav ul li.liuyan{
+	width: 80px;
+}
+nav ul li .tu{
+	width: 24px;
+	height: 21px;
+	margin: 0 auto;
+	margin-top: 24.5px;
+}
+nav ul li a{
+	width: 100%;
+	float: left;
+	display: block;
+	height: 100%;
+	font-size: 18px;
+	color: #fff;
+}
+nav ul li:hover{
+	background-image: url('../img/8.jpg');
+	background-size: cover;
+
+}
+.banner{
+	width: 100%;
+	height: 373.78px;
+	position: relative;
+}
+.banner-1{
+	width: 100%;
+	height: 373.78px;
+	overflow: hidden;
+}
+.banner-1 li{
+	width: 100%;
+	height: 373.78px;
+}
+.banner-1 li a{
+	width: 100%;
+	height: 373.78px;
+}
+.banner-1 li a img{
+	width: 100%;
+	height: 373.78px;
+}
+.banner .lunbo{
+	width: 48px;
+	height: 13px;
+	position: absolute;
+	bottom: 40px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.banner .dian{
+	float: left;
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	background: #fff;
+	margin-left: 10px;
+}
+.banner .dian1{
+	float: left;
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	background: #9782A0;
+	margin-left: 10px;
+}
+.about_con{
+	width: 100%;
+    margin: 0 auto;
+    background: url('../img/bg.png') no-repeat top center #25052e;
+    padding-top: 1px;
+    position: relative;
+    z-index: 2;
+}
+.main_bot{
+	background: url('../img/main_bot.png') no-repeat center bottom;
+}
+.about_con1{
+	width: 1200px;
+    margin: 0 auto;
+    margin-top: -45px;
+    min-height: 113px;
+    position: relative;
+    background: url('../img/about_bg.png') no-repeat top center;
+}
+.about_con2{
+	width: 1107px;
+    color: #ffffff;
+    font-size: 14px;
+    margin: 0 auto;
+    padding-left: 25px;
+    background: url('../img/fz.png') no-repeat;
+}
+.about_con2 a{
+    color: #ffffff;
+    font-size: 14px;
+}
+.clear{
+    clear: both;
+}
+.about_qyjj{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0px 34px;
+    position: relative;
+    height: 56px;
+    background: url('../img/wej.png') no-repeat center center #650c7a;
+    text-align: center;
+}
+.tit{
+    font-size: 20px;
+    color: #f8f8f8;
+}
+.abouttype{
+    width: 1200px;
+    margin: 0 auto;
+    height: 100px;
+    background: #650c7a;
+    text-align: center;
+}
+.abouttype ul li {
+    padding: 0px 28px;
+    color: #3f084d;
+    font-size: 16px;
+    height: 32px;
+    display: inline-block;
+    line-height: 32px;
+    margin-right: 21px;
+    background: #e8b2f9;
+}
+.abouttype ul li a{
+    color: #3f084d;
+}
+.news_left {
+    float: left;
+    width: 147px;
+    height: 111px;
+    font-size: 0;
+    margin-right: 12px;
+}
+.news_text{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0px 15px;
+    background: #650c7a;
+}
+.news_text ul li {
+    float: left;
+    margin-left: 22px;
+}
+.news_text ul li a {
+    display: block;
+    width: 542px;
+    padding-left: 10px;
+  
+    height: 136px;
+    border-bottom: 1px solid #e8b2f9;
+    margin-bottom: 22px;
+}
+.news_left {
+    float: left;
+    width: 147px;
+    height: 111px;
+    font-size: 0;
+}
+.news_left img {
+    width: 147px;
+    height: 111px;
+}
+.news_right{
+    width: 367px;
+    float: left;
+}
+.news_title{
+    padding-top: 10px;
+    line-height: 32px;
+    color: #ffffff;
+    font-size: 16px;
+}
+.news_jj{
+    color: #e8b2f9;
+    line-height: 24px;
+    font-size: 14px;
+}
+.clear{
+    clear: both;
+}
+
+.page{
+    height: 151px;
+    text-align: center;
+}
+.clear{
+    clear: both;
+}
+footer{
+	padding-top: 1px;
+	width: 100%;
+	height: 155px;
+	background: url('../img/bot_bg.png') no-repeat center center;
+}
+.foot-main{
+	width: 1200px;
+	margin: -43px auto 0;
+	height: 197px;
+	background: url('../img/glt.png') no-repeat top center;
+	position: relative;
+	z-index: 999;
+}
+.foot-main1{
+	width: 1200px;
+	height: 155px;
+	position: absolute;
+	top: 43px;
+	left: 0;
+}
+.kong1{
+	width: 100%;
+	height: 37px;
+
+}
+.erweima{
+	width: 102px;
+	height: 102px;
+	float: left;
+	margin-left: 22px;
+}
+.dot{
+	width: 785px;
+	float: left;
+	margin-left: 12px;
+}
+.dot p{
+	font-size: 12px;
+	color: #fff;
+	line-height: 30px;
+}
+.bot-right{
+	width: 277px;
+	float: right;
+
+}
+.bot-right1{
+	height: 24px;
+	padding-left: 55px;
+	margin-bottom: 15px;
+}
+.tubian{
+	width: 27px;
+	height: 24px;
+	float: left;
+	margin-right: 3px;
+}
+.tubian1{
+	background: url('../img/top_logos_sprite.gif') no-repeat 0 -338px;
+}
+.tubian2{
+	background: url('../img/top_logos_sprite.gif') no-repeat 0 -286px;
+}
+.tubian3{
+	background: url('../img/weixin.gif') no-repeat;
+}
+.tubian4{
+	background: url('../img/top_logos_sprite.gif') no-repeat 0 -390px;
+}
+.tubian5{
+	background: url('../img/top_logos_sprite.gif') no-repeat 0 -364px;
+}
+.tubian6{
+	background: url('../img/top_logos_sprite.gif') no-repeat 0 -234px;
+}
+.tubian7{
+	background: url('../img/more-style-addthis.gif') no-repeat;
+}
+.bot-right2{
+	width: 100%;
+	height: 50px;
+
+}
+
+.fenxiang1{
+	float: left;
+	width: 40px;
+	height: 39px;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+.fenxiang3{
+	float: left;
+	width: 165px;
+	height: 50px;
+	margin-right: 10px;
+}
+.fenxiang3 p{
+	font-size: 25px;
+	color: #fff;
+}
+.fenxiang3 p:nth-child(2){
+	font-size: 14px;
+}
+.banner-1 {
+	width: 100%;
+	height: 373.78px;
+	overflow: hidden;
+}
+.banner-1 li {
+	width: 100%;
+	height: 373.78px;
+}
+.banner-1 li a {
+	width: 100%;
+	height: 373.78px;
+}
+.banner-1 li a img {
+	width: 100%;
+	height: 373.78px;
+}

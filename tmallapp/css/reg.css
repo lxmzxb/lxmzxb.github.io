@@ -1,0 +1,127 @@
+body{
+	background: #eeeeee;
+}
+header{
+	width: 100%;
+	height: 0.94rem;
+	background: linear-gradient(#F1F1F1,#E7E7E7);
+	box-shadow: 0 0.04rem 0.2rem 0.02rem #DBDBDC;
+	position: relative;
+}
+h1{
+	margin: 0 auto;
+	line-height: 0.94rem;
+	text-align: center;
+	font-size: 0.4rem;
+	font-weight: 400;
+	color: #333;
+}
+.back{
+	
+	width: 1rem;
+	height: 0.6rem;
+	background: linear-gradient(#F2F2F2,#e6e6e6);
+	font-size:  0.28rem;
+	border: 0.02rem solid  #c1c1c5;
+	text-align: center;
+	line-height: 0.6rem;
+	border-radius: 0.1rem;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0.15rem;
+	margin: auto;
+	color: #888;
+}
+.tishi{
+	font-size: 0.28rem;
+	margin-left: 0.2rem;
+	color: #333;
+	line-height: 0.8rem;
+}
+.biaodan{
+	width: 100%;
+	height: 0.82rem;
+	background: #fff;
+	padding: 0 0.2rem;
+	line-height: 0.82rem;
+	position: relative;
+}
+.biaodan-left{
+	float: left;
+	width: 1.42rem;
+	height: 0.48rem;
+	text-align: left;
+	line-height: 0.82rem;
+	font-size: 0.32rem;
+}
+.biaodan-right{
+	width: 3.78rem;
+	height: 0.48rem;
+	font-size: 0.32rem;
+	text-align: left;
+	line-height: 0.82rem;
+	margin-left: 3rem;
+
+}
+.xiala{
+	width: 0.5rem;
+	height: 0.62rem;
+	float: right;
+	line-height: 0.82rem;
+	margin-top: -0.4rem;
+}
+.biaodan img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.fenge{
+	width: 7.3rem;
+	height: 0.02rem;
+	background: #E8E8E8;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+}
+.phone{
+	width: 5.08rem;
+	height: 0.56rem;
+	text-align: left;
+	line-height: 0.82rem;
+	position: absolute;
+	top: 0;
+	bottom: 0 ;
+	margin: auto;
+	border: 0;
+}
+.yanzheng{
+	width: 6.9rem;
+	height: 1.04rem;
+	margin: 0 auto;
+	background: #DDDDDD;
+	margin-top: 0.3rem;
+	box-shadow: 0 0 0.06rem #999;
+	position: relative;
+}
+.youhua{
+	width: 1.04rem;
+	height: 100%;
+}
+.yanzheng img{
+	display: block;
+}
+.huadong{
+	font-size: 0.32rem;
+	text-align: center;
+	margin-top: -0.8rem;
+	color: #aaa;
+}
+.xieyi{
+	width: 100%;
+	padding: 0.1rem 0.2rem;
+	font-size: 0.28rem;
+	color: #6c6c6c;
+	text-align: center;
+}

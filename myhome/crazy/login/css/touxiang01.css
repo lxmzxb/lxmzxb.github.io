@@ -1,0 +1,163 @@
+body{
+	background: #111c7a;
+}
+.fanhuishangji{
+	width: 0.4rem;
+	height: 0.4rem;
+	
+	margin-top: 0.57rem;
+	margin-left: 0.25rem;
+	background-image: url('../img/blueanniu_03.png');
+	background-size: 100%;
+}
+.mian{
+	width: 100%;
+	overflow: hidden;
+	background: #fff;
+	margin-top: 0.37rem;
+	padding: 0.7rem 0.2rem;
+
+}
+.mian-zhuti{
+	width: 7.09rem;
+	height: 6.66rem;
+	background: url('../img/touxiang01-ren_03.png') center center no-repeat;
+	background-size: 100%;
+	position: relative;
+
+}
+.biankuang{
+	
+	/* background: red; */
+	width: 100%;
+	height: 0.06rem;
+	background: #cdd0d1;
+	margin-top: 2.35rem;
+	float: left;
+}
+.hongtiao{
+	width: 2.49rem;
+	height: 100%;
+	background: #ff1c7f;
+	float: left;
+}
+.biankuangshu{
+	
+	/* background: red; */
+	width:  0.06rem;
+	height: 100%;
+	background: #cdd0d1;
+	margin-left: 2.48rem;
+	float: left;
+	position: absolute;
+	top: 0;
+	left:2.48rem ;
+	margin: auto;
+}
+.biankuangshu.b{
+	
+	left:4.58rem ;
+
+}
+.yuandian{
+	width: 0.1rem;
+	height: 0.1rem;
+	border-radius: 50%;
+	background: #fcd230;
+	border: 0.03rem solid #101a74;
+	position: absolute;
+	top: 2.35rem;
+	left:2.48rem ;
+	margin: auto;
+}
+.yuandian.b{
+  left:4.58rem ; 	
+}
+.yuandian.c{
+	top: 4.72rem;
+	background: #ff1c7f;
+}
+.yuandian.d{
+   top: 4.72rem;
+   left:4.58rem ; 	
+}
+.beijingxuanzhuang{
+	width: 100%;
+	height: 0.94rem;
+	
+	padding: 0rem 2.04rem;
+}
+img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.xuanze-touxiang{
+	width: 100%;
+	height: 1.02rem;
+	
+	margin-top: 0.32rem;
+	padding: 0rem 0.05rem;
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+}
+.touxiang-yuan{
+	width: 1.02rem;
+	height: 1.02rem;
+	border-radius: 50%;
+	border:0.06rem solid #dedbdb;
+	
+}
+.hot{
+	width: 0.35rem;
+	height: 0.2rem;
+	border-radius: 0.2rem;
+	background: #f9f9f9;
+	border: 0.02rem solid #ff1c7f;
+	position: absolute;
+	top: 10rem;
+	left: 2.4rem;
+	margin: auto;
+	font-family: "黑体";
+	font-size: 0.14rem;
+	color: #565658;
+	text-align: center;
+}
+.VIP{
+	width: 0.35rem;
+	height: 0.2rem;
+	border-radius: 0.2rem;
+	background: #f9f9f9;
+	border: 0.02rem solid #ff1c7f;
+	position: absolute;
+	top: 10rem;
+	left: 5.4rem;
+	margin: auto;
+	font-family: "黑体";
+	font-size: 0.14rem;
+	color: #565658;
+	text-align: center;
+}
+.dibu{
+	width: 100%;
+	
+	 height: 1.46rem; 
+	overflow: hidden;
+}
+.caijian{
+	width: 3.86rem;
+	height: 1.46rem;
+	background: red;
+	float: left;
+	
+}
+.tiaozheng{
+	width: 3.64rem;
+	height: 1.46rem;
+	background: yellow;
+	float: left;
+	
+}
